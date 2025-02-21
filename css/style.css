@@ -257,7 +257,6 @@ section {
     margin-top: 5rem;
 }
 
-
 .box {
     background: var(--second-bg-color);
     padding: 35px 45px;
@@ -280,7 +279,8 @@ section {
 
 .box p {
     color: var(--second-color);
-    font-size: 1rem;
+    flex-grow: 1;
+    font-size: calc(100% - 20px);
     line-height: 1.8;
     margin-bottom: 25px;
 }
@@ -329,17 +329,18 @@ section {
     transition: height 0.5s;
 }
 
-.layer h5 {
-    font: 20px;
+.layer h3 {
+    font-size: 1.2vw;
     font-weight: 600;
     margin-bottom: 15px;
+    text-align: center;
 }
 
 .layer p {
     color: var(--second-color);
-    font-size: 1rem;
+    font-size: 0.9vw;
     line-height: 1.8;
-
+    text-align: center;
 }
 
 .layer i {
