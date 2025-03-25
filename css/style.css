@@ -271,7 +271,7 @@ section {
 }
 
 .box h3 {
-    font-size: 24px;
+    font-size: 23px;
     font-weight: 600;
     color: var(--text-color);
     margin-bottom: 15px;
@@ -280,7 +280,7 @@ section {
 .box p {
     color: var(--second-color);
     flex-grow: 1;
-    font-size: calc(100% - 20px);
+    font-size: 83%;
     line-height: 1.8;
     margin-bottom: 25px;
 }
