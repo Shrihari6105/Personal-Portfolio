@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio website! This project showcases my work, skills, and experience in a visually engaging and interactive manner.
 
-Check out the live version of my portfolio here: [Website](https://shrihari6105.github.io/Personal-Portfolio/)
+Check out the live version of my portfolio here: [Website](https://personal-portfolio-sepia-six.vercel.app/)
 
 ## 📌 Features
 - **Responsive Design** - Optimized for all devices (desktop, tablet, mobile).
