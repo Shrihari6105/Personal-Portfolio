@@ -1,291 +1,423 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Portfolio</title>
-	<!---custom css link---->
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="shortcut icon" href="img/tab_logo.jpg" />
-	<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description"
+		content="Shrihari V — Information Security Student at VIT Vellore. Penetration testing, VAPT, OWASP, Threat Analysis." />
+	<title>Shrihari V — Information Security Portfolio</title>
+	<link rel="icon" href="img/tab_logo.jpg" type="image/jpeg" />
+
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;800;900&family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+		rel="stylesheet" />
+
+	<!-- Boxicons (used in original markup) -->
+	<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+	<!-- FontAwesome for additional icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+	<!-- GSAP (for PillNav) -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+	<link rel="stylesheet" href="CSS/pill-nav.css" />
+	<link rel="stylesheet" href="CSS/style.css" />
 </head>
 
 <body>
-	<!------Header Section------>
-	<header>
-		<a href="#" class="logo">Port<span>fo</span>lio</a>
-		<ul class="navlist">
-			<li><a href="#home" class="active">Home</a></li>
-			<li><a href="#about">About Me</a></li>
-			<li><a href="#education">Education</a></li>
-			<li><a href="#skills">Skills</a></li>
-			<li><a href="#projects">Projects</a></li>
-			<li><a href="#contact">Contact</a></li>
-		</ul>
-		<div class="bx bx-menu" id="menu-icon"></div>
-	</header>
+	<!-- ============== Pill Navigation ============== -->
+	<div id="pill-nav-wrapper"></div>
 
-	<!---------Home Section--------------->
-	<section class="home" id="home">
+	<!-- ============== Home / Hero ============== -->
+	<section class="home" id="home" data-testid="home-section">
+		<div id="letter-glitch-bg" aria-hidden="true"></div>
+		<div class="bg-grid" aria-hidden="true"></div>
+		<div class="bg-glow" aria-hidden="true"></div>
+
 		<div class="home-text">
 			<div class="slide">
 				<span class="one">Hello</span>
 				<span class="two">I'm</span>
 			</div>
-			<h1>Shrihari</h1>
-			<h3>Information Security<span> Student.</span></h3>
-			<!-- <div class="button">
-				<li><a href="#about" class="btn">About Me</a></li>
-			</div> -->
+			<h1 data-testid="hero-name">Shrihari</h1>
+			<h3><span class="accent-text">Information Security</span> Student.</h3>
+			<p class="hero-sub">
+				BTech CSE (Information Security), VIT Vellore
+			</p>
+			<div class="hero-cta">
+				<a href="#projects" class="btn btn-primary" data-testid="cta-projects">
+					<i class="fa-solid fa-code"></i> View Projects
+				</a>
+				<a href="#contact" class="btn btn-secondary" data-testid="cta-contact">
+					<i class="fa-solid fa-paper-plane"></i> Contact Me
+				</a>
+			</div>
 		</div>
 	</section>
 
-	<!---------about Section --------------->
-	<section class="about" id="about">
+	<!-- ============== About ============== -->
+	<section class="about" id="about" data-testid="about-section">
 		<div class="about-img">
-			<img src="img/about.jpg">
+			<div class="img-wrap">
+				<img src="img/about.jpg" alt="Shrihari V"
+					onerror="this.style.display='none'; this.parentElement.classList.add('img-fallback');" />
+				<div class="img-fallback-icon"><i class="fa-solid fa-user-shield"></i></div>
+			</div>
 		</div>
 
 		<div class="about-text">
+			<span class="section-tag">About</span>
 			<h2>About <span>Me</span></h2>
-			<br>
-			<p> As a sophomore Computer Science student, I am eager to expand my knowledge 
-				and gain hands-on experience in the tech industry. With proficiency in Python,
-				Java, and MySQL, and a strong commitment to continuous learning, I am 
-				well-prepared to contribute meaningfully to dynamic and innovative projects
+			<p style="text-align: justify;">
+				Pre-Final Year BTech student in Computer Science (Information Security) at VIT Vellore
+				(CGPA: 8.66), with hands-on experience in penetration testing, vulnerability assessment,
+				and application security from both academic projects and an industry internship.
+				Completed the IBM Cybersecurity Analyst Professional Certification and delivered a full
+				OWASP-aligned VAPT engagement on a production SaaS platform. Targeting roles in offensive
+				security, threat analysis, or secure systems development.
 			</p>
-			<!-- <a href="#" class="btn">More About</a> -->
 		</div>
 	</section>
 
-	<!-----------Education Section-------------->
-	<section class="education" id="education">
+	<!-- ============== Education ============== -->
+	<section class="education" id="education" data-testid="education-section">
 		<div class="main-text">
+			<span class="section-tag">Journey</span>
 			<h2>E<span>du</span>cation</h2>
 		</div>
 		<div class="education-content">
-			<div class="box">
-				<!-- <div class="s-icons">
-					<i class='bx bx-mobile-alt'></i>
-				</div> -->
+			<div class="box" data-testid="education-vit">
+				<div class="box-icon"><i class="fa-solid fa-graduation-cap"></i></div>
 				<h3>VIT Vellore</h3>
-				<br>
-				<p>BTech, Computer Science (Information Security)
-					<br>Aug 2023
+				<p class="box-meta">BTech · Computer Science (Information Security)<br />Aug 2023 – Present · CGPA 8.66
 				</p>
-				<a href="https://vit.ac.in/" class="btn">Read More</a>
+				<a href="https://vit.ac.in/" target="_blank" rel="noopener" class="btn btn-ghost">Visit <i
+						class="fa-solid fa-arrow-up-right-from-square"></i></a>
 			</div>
 
-			<div class="box">
-				<!-- <div class="s-icons">
-					<i class='bx bx-code-alt'></i>
-				</div> -->
+			<div class="box" data-testid="education-chettinad">
+				<div class="box-icon"><i class="fa-solid fa-school"></i></div>
 				<h3>Chettinad Vidyashram</h3>
-				<br>
-				<p>Class 12, Computer Science CBSE, High Sc
-					<br>Grade: 93%
-					<br>Mar 2021 - May 2023
-				</p>
-				<a href="https://chettinadvidyashram.org/" class="btn">Read More</a>
+				<p class="box-meta">Class 12 · Computer Science (CBSE)<br />Mar 2021 – May 2023 · 93%</p>
+				<a href="https://chettinadvidyashram.org/" target="_blank" rel="noopener" class="btn btn-ghost">Visit <i
+						class="fa-solid fa-arrow-up-right-from-square"></i></a>
 			</div>
 
-			<div class="box">
-				<!-- <div class="s-icons">
-					<i class='bx bx-edit-alt'></i>
-				</div> -->
-				<h3>Dr. C. L. METHA SISHYA OMR</h3>
-				<br>
-				<p>Class 10, ICSE
-					<br> Grade: 93%
-					<br>Jun 2018 - Apr 2020
-				</p>
-				<a href="https://sishyaomrschool.org/" class="btn">Read More</a>
+			<div class="box" data-testid="education-sishya">
+				<div class="box-icon"><i class="fa-solid fa-book"></i></div>
+				<h3>Dr. C. L. Methta Sishya OMR</h3>
+				<p class="box-meta">Class 10 · ICSE<br />Jun 2018 – Apr 2020 · 93%</p>
+				<a href="https://sishyaomrschool.org/" target="_blank" rel="noopener" class="btn btn-ghost">Visit <i
+						class="fa-solid fa-arrow-up-right-from-square"></i></a>
 			</div>
 		</div>
-
 	</section>
 
-	<!-----------Skills Section--------------->
-	<section class="skills" id="skills">
+	<!-- ============== Experience ============== -->
+	<section class="education experience" id="experience" data-testid="experience-section">
 		<div class="main-text">
+			<span class="section-tag">Work</span>
+			<h2>Exp<span>eri</span>ence</h2>
+		</div>
+		<div class="education-content single-col">
+			<div class="box exp-box" data-testid="experience-vyastics">
+				<div class="exp-head">
+					<div class="exp-img"><img src="img/Vyastics Logo.jpeg" alt="Vyastics Logo"></div>
+					<div>
+						<h3>Cybersecurity &amp; Data Analytics Intern</h3>
+						<p class="box-meta"><b>Vyastics</b> · On-site &nbsp;|&nbsp; May 2026 – June 2026
+						</p>
+					</div>
+				</div>
+				<ul class="exp-list">
+					<li><i class="fa-solid fa-bug"></i> Led a multi-phase VAPT of a SaaS document-signing platform
+						(OWASP WSTG / API Top 10), chaining an auth weakness into a critical-impact exploit with full
+						reproduction evidence.</li>
+					<li><i class="fa-solid fa-key"></i> Tested auth/session (JWT, rate limiting), authorization
+						(BOLA/BFLA, multi-tenant isolation), and API / file / webhook surfaces with Burp Suite, Nmap,
+						OpenVAS, and Gobuster.</li>
+					<li><i class="fa-solid fa-check-double"></i> Executed functional QA across 7 products with detailed
+						defect documentation.</li>
+					<li><i class="fa-solid fa-database"></i> Wrote analytical SQL using CTEs and window functions (RANK,
+						LAG, NTILE) for revenue and customer segmentation analysis.</li>
+					<li><i class="fa-solid fa-chart-column"></i> Built Tableau BI dashboards including a 3-page
+						healthcare finance dashboard and a payroll dashboard with custom attendance/overtime/TDS logic.
+					</li>
+				</ul>
+				<div class="exp-actions">
+					<a href="https://shrihari6105.github.io/Healthcare-Finance-Dashboard/" target="_blank"
+						rel="noopener" class="btn btn-primary btn-sm" data-testid="exp-link-dashboard">
+						<i class="fa-solid fa-chart-line"></i> View Dashboard
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ============== Certifications ============== -->
+	<section class="education certifications" id="certifications" data-testid="cert-section">
+		<div class="main-text">
+			<span class="section-tag">Credentials</span>
+			<h2>Certifi<span>ca</span>tions</h2>
+		</div>
+		<div class="education-content">
+			<div class="box cert-box" data-testid="cert-ibm">
+				<div class="box-icon ibm"><i class="fa-solid fa-shield-halved"></i></div>
+				<h3>IBM Cybersecurity Analyst</h3>
+				<p class="box-meta">Professional Certification · IBM &amp; SkillsBuild</p>
+				<p>Covers threat intel, IR, network &amp; endpoint security, vulnerability management, and forensics —
+					built around real-world SOC workflows.</p>
+				<a href="https://courses.vit.skillsnetwork.site/certificates/382eeecef72f44a7870255b9f7cd5df1"
+					target="_blank" rel="noopener" class="btn btn-primary" data-testid="cert-link-ibm">
+					<i class="fa-solid fa-certificate"></i> View Certificate
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- ============== Skills ============== -->
+	<section class="education skills" id="skills" data-testid="skills-section">
+		<div class="main-text">
+			<span class="section-tag">Stack</span>
 			<h2><span>Sk</span>ills</h2>
 		</div>
-		<div class="skills-content">
-			
-			<div class="row">
-				<img src="img/project6.jpg">
-				<div class="layer">
-					<br>
-					<br>
-					<h3>Passion for Cybersecurity:</h3>
-					<p>My enthusiasm for cybersecurity goes
-						beyond technical skills; I stay informed about the latest
-						cybersecurity trends and threats.</p>
-					<!-- <a href="#"> <i class='bx bx-link-external'></i></a> -->
+		<div class="education-content">
+			<div class="box skill-box" data-testid="skill-languages">
+				<div class="box-icon"><i class="fa-solid fa-code"></i></div>
+				<h3>Languages</h3>
+				<div class="chips">
+					<span class="chip">Python</span><span class="chip">Java</span>
+					<span class="chip">C</span><span class="chip">C++</span><span class="chip">SQL</span>
 				</div>
 			</div>
-			
-			<div class="row">
-				<img src="img/project1.jpg">
-				<div class="layer">
-					<br>
-					<br>
-					<h3>Web designing:</h3>
-					<p>Familiar with web development using HTML, CSS, and JavaScript, which helps in understanding how modern web applications are built</p>
-					<!-- <a href="#"> <i class='bx bx-link-external'></i></a> -->
+			<div class="box skill-box" data-testid="skill-offensive">
+				<div class="box-icon"><i class="fa-solid fa-crosshairs"></i></div>
+				<h3>Offensive Security</h3>
+				<div class="chips">
+					<span class="chip">VAPT</span><span class="chip">OWASP WSTG/API</span>
+					<span class="chip">JWT Testing</span><span class="chip">BOLA/BFLA</span>
+					<span class="chip">Priv Esc</span><span class="chip">SQLi</span>
+					<span class="chip">XSS</span><span class="chip">SSRF</span>
 				</div>
 			</div>
-
-			<div class="row">
-				<img src="img/project2.jpg">
-				<div class="layer">
-					<br>
-					<br>
-					<h3>Proficient in Python:</h3>
-					<p>Comfortable writing Python programs and solving problems using variables, loops, functions, and file handling</p>
-					<!-- <a href="#"> <i class='bx bx-link-external'></i></a> -->
+			<div class="box skill-box" data-testid="skill-defensive">
+				<div class="box-icon"><i class="fa-solid fa-shield"></i></div>
+				<h3>Defensive Security</h3>
+				<div class="chips">
+					<span class="chip">Network Security</span><span class="chip">IDS/IPS</span>
+					<span class="chip">Firewall Design</span><span class="chip">Threat Analysis</span>
+					<span class="chip">RBAC/ABAC</span><span class="chip">CVSS v3.1</span>
 				</div>
 			</div>
-
-			<div class="row">
-				<img src="img/project3.jpg">
-				<div class="layer">
-					<br>
-					<br>
-					<h3>Java Proficiency:</h3>
-					<p>My Able to write Java programs and understand fundamental programming concepts such as classes, loops, and conditionals</p>
-					<!-- <a href="#"> <i class='bx bx-link-external'></i></a> -->
+			<div class="box skill-box" data-testid="skill-tools">
+				<div class="box-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+				<h3>Security Tools</h3>
+				<div class="chips">
+					<span class="chip">Burp Suite</span><span class="chip">Nmap</span>
+					<span class="chip">Metasploit</span><span class="chip">OpenVAS</span>
+					<span class="chip">Wireshark</span><span class="chip">Scapy</span>
+					<span class="chip">Gobuster</span><span class="chip">Dirsearch</span>
 				</div>
 			</div>
-
-			<div class="row">
-				<img src="img/project4.jpg">
-				<div class="layer">
-					<br>
-					<br>
-					<h3>MySQL Database Management:</h3>
-					<p>Familiar with creating databases, writing basic SQL queries, and retrieving data using SELECT statements</p>
-					<!-- <a href="#"> <i class='bx bx-link-external'></i></a> -->
+			<div class="box skill-box" data-testid="skill-data">
+				<div class="box-icon"><i class="fa-solid fa-chart-pie"></i></div>
+				<h3>Data &amp; QA</h3>
+				<div class="chips">
+					<span class="chip">Tableau</span><span class="chip">SQL · CTEs</span>
+					<span class="chip">Window Functions</span><span class="chip">Functional Testing</span>
 				</div>
 			</div>
-
-			<div class="row">
-				<img src="img/project5.jpg">
-				<div class="layer">
-					<br>
-					<br>
-					<h3>Linux Expertise: </h3>
-					<p>Experienced with using Linux for everyday tasks such as file management, navigation, and basic command-line operations</p>
-					<!-- <a href="#"> <i class='bx bx-link-external'></i></a> -->
-				</div>
-			</div>
-
-			
 		</div>
-
 	</section>
 
-	<!---------------- Projects section ----------------->
-	<section class="projects" id="projects">
+	<!-- ============== Projects ============== -->
+	<section class="projects" id="projects" data-testid="projects-section">
 		<div class="main-text">
+			<span class="section-tag">Work</span>
 			<h2><span>Pro</span>jects</h2>
 		</div>
+
+		<div class="filter-chips" data-testid="project-filters">
+			<button class="filter-chip active" data-filter="all" data-testid="filter-all">All</button>
+			<button class="filter-chip" data-filter="security" data-testid="filter-security">Security</button>
+			<button class="filter-chip" data-filter="web" data-testid="filter-web">Web Dev</button>
+		</div>
+
 		<div class="projects-content">
-			<div class="box">
-				<!-- <div class="s-icons">
-					<i class='bx bx-mobile-alt'></i>
-				</div> -->
-				<!-- <h3>VIT Vellore</h3>
-				<br>
-				<p>BTech, Computer Science (Information Security)
-				<br>Aug 2023</p> -->
-				
-					<h3><b>Auction Management System</b></h3>
-					<br>	
-					<p>
-						This auction management software helps in easily coordinating auction
-						houses and simplify the process by a great deal. This Project was done
-						using Python 3.9 (64-bit) and MySQL 8.0 Command Line Client.
-					</p>
-				
-				<a href="https://github.com/Shrihari6105/Auction-Management-System" class="btn">Github Link</a>
-			</div>
+			<article class="box project-box" data-category="security" data-testid="project-metasploit">
+				<div class="project-head">
+					<div class="box-icon"><i class="fa-solid fa-skull-crossbones"></i></div>
+					<span class="badge">Penetration Test</span>
+				</div>
+				<h3>Exploitation Using Metasploit</h3>
+				<p>End-to-end penetration test against a Metasploitable2 target on Kali Linux, covering reconnaissance
+					through post-exploitation.</p>
+				<ul class="proj-bullets">
+					<li>Exploited UnrealIRCd backdoor (CVE-2010-2075) for root shell.</li>
+					<li>Extracted password hashes &amp; established SSH/Netcat persistence.</li>
+				</ul>
+				<div class="project-foot">
+					<span class="proj-date"><i class="fa-regular fa-calendar"></i> Jan 2025</span>
+					<a href="https://github.com/Shrihari6105/Exploitation-Using-Metasploit" target="_blank"
+						rel="noopener" class="btn btn-primary btn-sm" data-testid="project-link-metasploit">
+						<i class="fa-brands fa-github"></i> View Repo
+					</a>
+				</div>
+			</article>
 
-			<div class="box">
-				<!-- <div class="s-icons">
-					<i class='bx bx-code-alt'></i>
-				</div> -->
+			<article class="box project-box" data-category="security" data-testid="project-hmac">
+				<div class="project-head">
+					<div class="box-icon"><i class="fa-solid fa-fingerprint"></i></div>
+					<span class="badge">App Security</span>
+				</div>
+				<h3>HTTP Request Integrity via HMAC</h3>
+				<p>Demonstrated HTTP parameter tampering via Burp Suite, then built a Flask server defending against it
+					using HMAC-SHA256 request signing.</p>
+				<ul class="proj-bullets">
+					<li>Constant-time HMAC-SHA256 comparison to block timing attacks.</li>
+					<li>Secure Flask backend verifying request integrity end-to-end.</li>
+				</ul>
+				<div class="project-foot">
+					<span class="proj-date"><i class="fa-regular fa-calendar"></i> Jan 2026</span>
+					<a href="https://github.com/Shrihari6105/HMAC-Integrity-Demo" target="_blank" rel="noopener"
+						class="btn btn-primary btn-sm" data-testid="project-link-hmac">
+						<i class="fa-brands fa-github"></i> View Repo
+					</a>
+				</div>
+			</article>
+
+			<article class="box project-box" data-category="web" data-testid="project-travel">
+				<div class="project-head">
+					<div class="box-icon"><i class="fa-solid fa-plane"></i></div>
+					<span class="badge">Full-Stack</span>
+				</div>
 				<h3>Travel Booking Website</h3>
-				<br>
-                <p>Developed a travel booking website using HTML, CSS, and JavaScript, featuring flight, train, bus, and hotel reservation 
-                  interfaces. Implemented interactive forms, embedded media, and user authentication to enhance user experience and accessibility.</p>
-				<a href="https://travel-booking-website-ten.vercel.app" class="btn">View Website</a>
-			</div>
+				<p>Full-stack travel portal built with HTML, CSS, JavaScript supporting multi-modal reservations.</p>
+				<ul class="proj-bullets">
+					<li>Booking flow for flights, trains, buses, hotels.</li>
+					<li>Client-side authentication &amp; persistent state.</li>
+				</ul>
+				<div class="project-foot">
+					<span class="proj-date"><i class="fa-regular fa-calendar"></i> Jan 2024</span>
+					<a href="https://travel-booking-website-ten.vercel.app/" target="_blank" rel="noopener"
+						class="btn btn-primary btn-sm" data-testid="project-link-travel">
+						<i class="fa-solid fa-arrow-up-right-from-square"></i> View Site
+					</a>
+				</div>
+			</article>
 		</div>
-
 	</section>
 
-	<!------------------Contact section------------>
-	<section class="contact" id="contact">
+	<!-- ============== Contact ============== -->
+	<section class="contact" id="contact" data-testid="contact-section">
 		<div class="contact-text">
+			<span class="section-tag">Get in touch</span>
 			<h2>Contact <span>Me!</span></h2>
-			<!-- <h4>If you have any project in your mind.</h4>
-			<p>I'm a website Designer - creating bold & brave interface design for compaines all across the world.</p> -->
-			<div class="list">
-				<br>
-				<h4>Mobile No : 8778358400</h4>
-				<h4>Email: shrihari6105@gmail.com</h4>
-				<h4> Linkedin:
-					<a style="color: #6f7577;"
-						href="https://www.linkedin.com/in/shrihari-v-40626b277/">linkedin.com/in/shrihari-v</a></h4>
-				<!-- <li><a href="#"><b>Mobile No:</b>8778358400</a></li>
-				<li><a href="#">itech@gmail.com</a></li>
-				<li><a href="#"></a></li> -->
-			</div>
+			<p>Open to internships and cyber-security roles.</p>
+		</div>
 
-			<div class="contact-icons">
-				<a href="https://www.instagram.com/_shrihari_._/" target="_blank"><i
-                                class='bx bxl-instagram'></i></a>
-                <a href="https://www.linkedin.com/in/shrihari-v-40626b277/" target="_blank"><i
-                                class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/Shrihari6105" target="_blank"><i 
-								class='bx bxl-github'></i></a>
-                <a href="https://x.com/_shrihari__" target="_blank"><i
-                                class='bx bxl-twitter'></i></a>
+		<div class="contact-info">
+			<ul class="contact-list" data-testid="contact-list">
+				<li>
+					<span class="ci"><i class="fa-solid fa-phone"></i></span>
+					<div><small>Mobile</small><a href="tel:+918778358400">+91 87783 58400</a></div>
+				</li>
+				<li>
+					<span class="ci"><i class="fa-solid fa-envelope"></i></span>
+					<div><small>Email</small><a href="mailto:shrihari6105@gmail.com">shrihari6105@gmail.com</a></div>
+				</li>
+				<li>
+					<span class="ci"><i class="fa-brands fa-linkedin"></i></span>
+					<div><small>LinkedIn</small><a target="_blank" rel="noopener"
+							href="https://www.linkedin.com/in/shrihari-v-40626b277/">linkedin.com/in/shrihari-v</a>
+					</div>
+				</li>
+			</ul>
+
+			<div class="contact-icons" data-testid="contact-socials">
+				<a href="https://www.instagram.com/_shrihari_._/" target="_blank" rel="noopener"
+					aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
+				<a href="https://www.linkedin.com/in/shrihari-v-40626b277/" target="_blank" rel="noopener"
+					aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+				<a href="https://github.com/Shrihari6105" target="_blank" rel="noopener" aria-label="GitHub"><i
+						class="bx bxl-github"></i></a>
+				<a href="https://x.com/_shrihari__" target="_blank" rel="noopener" aria-label="Twitter"><i
+						class="bx bxl-twitter"></i></a>
 			</div>
 		</div>
-		<!-- <div class="contact-form">
-			<form action="">
-				<input type="name" placeholder="Your Name " required>
-				<input type="email" placeholder="Your Email " required>
-				<input type="number" placeholder="your Mobile Number" required>
-				<textarea name="" id="" cols="35" rows="10" placeholder="How Can I Help You " required></textarea>
-				<input type="submit" value="Send Message" class="submit" required>
-			</form>
-
-		</div> -->
-	</section>
-
-	<!---------------------End Section----------------------->
-	<!-- <section class="end">
-		<div class="last-text"> -->
-
-	<!-- </div>
-		<div class="top">
-			<a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+		<!--
+		<div class="contact-card" data-testid="contact-card">
+			<div class="contact-card-inner">
+				<i class="fa-solid fa-terminal contact-card-icon"></i>
+				<h3>Let's build something secure.</h3>
+				<p>Whether it's a VAPT engagement, a CTF team-up or a research idea — I'd love to hear about it.</p>
+				<a href="mailto:shrihari6105@gmail.com" class="btn btn-primary" data-testid="email-cta">
+					<i class="fa-solid fa-paper-plane"></i> Send Email
+				</a>
+			</div>
 		</div>
-	</section> -->
-
-	<!--------------- Footer section --------------->
-	<section class="end">
-		<footer>
-			<p>&copy; 2025 Shrihari V. All rights reserved.</p>
-		</footer>
-		<!-- <div class="top">
-			<a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
-		</div> -->
+-->
 	</section>
+
+	<!-- ============== Footer ============== -->
+	<footer class="end" data-testid="footer">
+		<p>© <span id="year"></span> Shrihari V ·</p>
+		<a href="#home" class="top-btn" aria-label="Back to top" data-testid="back-to-top"><i
+				class="bx bx-up-arrow-alt"></i></a>
+	</footer>
+
+	<script src="js/pill-nav.js"></script>
+	<script src="js/click-spark.js"></script>
+	<script src="js/letter-glitch.js"></script>
+	<script>
+		// Initialize LetterGlitch on the hero background
+		const glitchContainer = document.getElementById('letter-glitch-bg');
+		if (glitchContainer) {
+			new LetterGlitch(glitchContainer, {
+				glitchSpeed: 50,
+				centerVignette: true,
+				outerVignette: true,
+				smooth: true,
+				glitchColors: ['#373737', '#d7dadd']
+			});
+		}
+
+		// Initialize PillNav
+		const pillNavContainer = document.getElementById('pill-nav-wrapper');
+		if (pillNavContainer) {
+			window.pillNavInstance = new PillNav(pillNavContainer, {
+				logoText: 'V.',
+				baseColor: '#000000',
+				pillColor: '#1c1c1c',
+				hoveredPillTextColor: '#ffffff',
+				pillTextColor: '#ffffff',
+				items: [
+					{ label: 'Home', href: '#home' },
+					{ label: 'About', href: '#about' },
+					{ label: 'Education', href: '#education' },
+					{ label: 'Experience', href: '#experience' },
+					{ label: 'Skills', href: '#skills' },
+					{ label: 'Projects', href: '#projects' },
+					{ label: 'Contact', href: '#contact' }
+				],
+				activeHref: '#home'
+			});
+		}
+
+		// Initialize ClickSpark (full-page)
+		new ClickSpark({
+			sparkColor: '#ffffff',
+			sparkSize: 12,
+			sparkRadius: 35,
+			sparkCount: 8,
+			duration: 400
+		});
+	</script>
+	<script src="js/main.js"></script>
 </body>
 
 </html>
