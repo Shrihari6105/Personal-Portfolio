@@ -1,291 +1,225 @@
-<!DOCTYPE html>
-<html>
-
+<!doctype html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Portfolio</title>
-	<!---custom css link---->
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="shortcut icon" href="img/tab_logo.jpg" />
-	<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shrihari V. · Information security student, VIT Vellore</title>
+<meta name="description" content="Shrihari V., final-year Information Security student at VIT Vellore. Splunk detections, a JWT attack and defense lab, and an explainable IDS.">
+<meta name="theme-color" content="#0B0C0E">
+<link rel="icon" href="img/tab_logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Geist:wght@400..600&display=swap">
+<link rel="stylesheet" href="engine/scrollcraft.css">
+<link rel="stylesheet" href="css/site.css">
 </head>
-
 <body>
-	<!------Header Section------>
-	<header>
-		<a href="#" class="logo">Port<span>fo</span>lio</a>
-		<ul class="navlist">
-			<li><a href="#home" class="active">Home</a></li>
-			<li><a href="#about">About Me</a></li>
-			<li><a href="#education">Education</a></li>
-			<li><a href="#skills">Skills</a></li>
-			<li><a href="#projects">Projects</a></li>
-			<li><a href="#contact">Contact</a></li>
-		</ul>
-		<div class="bx bx-menu" id="menu-icon"></div>
-	</header>
 
-	<!---------Home Section--------------->
-	<section class="home" id="home">
-		<div class="home-text">
-			<div class="slide">
-				<span class="one">Hello</span>
-				<span class="two">I'm</span>
-			</div>
-			<h1>Shrihari</h1>
-			<h3>Information Security<span> Student.</span></h3>
-			<!-- <div class="button">
-				<li><a href="#about" class="btn">About Me</a></li>
-			</div> -->
-		</div>
-	</section>
+<div class="sc-grain" aria-hidden="true"></div>
 
-	<!---------about Section --------------->
-	<section class="about" id="about">
-		<div class="about-img">
-			<img src="img/about.jpg">
-		</div>
+<!-- The folio: the page's only chrome. Chapter number and title, in the margin. -->
+<nav class="folio" aria-label="Chapters">
+  <ol>
+    <li><a href="#person" data-folio="person"><span class="folio__n">I</span><span class="folio__t">The person</span></a></li>
+    <li><a href="#record" data-folio="record"><span class="folio__n">II</span><span class="folio__t">Record</span></a></li>
+    <li><a href="#toolkit" data-folio="toolkit"><span class="folio__n">III</span><span class="folio__t">Toolkit</span></a></li>
+    <li><a href="#files" data-folio="files"><span class="folio__n">IV</span><span class="folio__t">Case files</span></a></li>
+    <li><a href="#colophon" data-folio="colophon"><span class="folio__n">V</span><span class="folio__t">Colophon</span></a></li>
+  </ol>
+</nav>
 
-		<div class="about-text">
-			<h2>About <span>Me</span></h2>
-			<br>
-			<p> As a sophomore Computer Science student, I am eager to expand my knowledge 
-				and gain hands-on experience in the tech industry. With proficiency in Python,
-				Java, and MySQL, and a strong commitment to continuous learning, I am 
-				well-prepared to contribute meaningfully to dynamic and innovative projects
-			</p>
-			<!-- <a href="#" class="btn">More About</a> -->
-		</div>
-	</section>
+<main id="top">
 
-	<!-----------Education Section-------------->
-	<section class="education" id="education">
-		<div class="main-text">
-			<h2>E<span>du</span>cation</h2>
-		</div>
-		<div class="education-content">
-			<div class="box">
-				<!-- <div class="s-icons">
-					<i class='bx bx-mobile-alt'></i>
-				</div> -->
-				<h3>VIT Vellore</h3>
-				<br>
-				<p>BTech, Computer Science (Information Security)
-					<br>Aug 2023
-				</p>
-				<a href="https://vit.ac.in/" class="btn">Read More</a>
-			</div>
+  <!-- TITLE PAGE · type on the ground, the shield receding behind the name -->
+  <section class="title" id="title" data-sc-act="flow" data-chapter="title">
+    <div class="title__shield" data-sc-parallax="-1.8" aria-hidden="true">
+      <svg viewBox="0 0 100 104" fill="none">
+        <path d="M50 3C66 12 82 15 94 15v32c0 30-20 46-44 54C26 93 6 77 6 47V15c12 0 28-3 44-12Z" stroke="currentColor" stroke-width=".35"/>
+        <path d="M50 11c13 7 26 10 36 10v26c0 25-16 38-36 45C30 85 14 72 14 47V21c10 0 23-3 36-10Z" stroke="currentColor" stroke-width=".18"/>
+        <circle cx="50" cy="44" r="8" stroke="currentColor" stroke-width=".35"/>
+        <path d="M46 51l-4 21h16l-4-21" stroke="currentColor" stroke-width=".35"/>
+      </svg>
+    </div>
+    <div class="title__body sc-wrap">
+      <h1 class="title__name">Shrihari&nbsp;V.</h1>
+      <div class="title__foot">
+        <p class="sc-lede">Final-year information security student at VIT Vellore. I build detections, break authentication, and then fix it.</p>
+        <p class="title__cta"><a class="cta-link" href="https://www.linkedin.com/in/shrihari-v-40626b277/" target="_blank" rel="noopener">Connect on LinkedIn</a></p>
+      </div>
+    </div>
+  </section>
 
-			<div class="box">
-				<!-- <div class="s-icons">
-					<i class='bx bx-code-alt'></i>
-				</div> -->
-				<h3>Chettinad Vidyashram</h3>
-				<br>
-				<p>Class 12, Computer Science CBSE, High Sc
-					<br>Grade: 93%
-					<br>Mar 2021 - May 2023
-				</p>
-				<a href="https://chettinadvidyashram.org/" class="btn">Read More</a>
-			</div>
+  <!-- I · THE PERSON · one real photograph, in its own column, with a caption -->
+  <section class="chapter person" id="person" data-sc-act="flow" data-chapter="person">
+    <div class="sc-wrap person__grid">
+      <figure class="person__fig" data-sc-reveal="up" data-sc-reveal-at="0.1 0.42">
+        <div class="person__frame">
+          <img src="img/about.jpg" width="1280" height="960" data-sc-parallax="-0.9"
+               alt="Shrihari standing on a tree-lined campus road, smiling, in a striped football shirt.">
+        </div>
+        <figcaption class="sc-label">On campus, between classes.</figcaption>
+      </figure>
+      <div class="person__text sc-stack" data-sc-in data-sc-stagger="70">
+        <p class="chapter__mark sc-label">Chapter I</p>
+        <h2 class="sc-display sc-display--lg">The person</h2>
+        <p class="sc-lede">I am in my final year of Computer Science (Information Security) at VIT Vellore, focused on security operations.</p>
+        <p class="sc-body">I write and tune SIEM detections in Splunk, test authentication and access control the way an attacker would, and spent a summer internship running a penetration test on a live SaaS platform. I am looking for a security operations role where that work is the job.</p>
+      </div>
+    </div>
+  </section>
 
-			<div class="box">
-				<!-- <div class="s-icons">
-					<i class='bx bx-edit-alt'></i>
-				</div> -->
-				<h3>Dr. C. L. METHA SISHYA OMR</h3>
-				<br>
-				<p>Class 10, ICSE
-					<br> Grade: 93%
-					<br>Jun 2018 - Apr 2020
-				</p>
-				<a href="https://sishyaomrschool.org/" class="btn">Read More</a>
-			</div>
-		</div>
+  <!-- II · RECORD · a ledger, not boxes. Real figures count into place. -->
+  <section class="chapter record" id="record" data-chapter="record">
+    <div class="sc-wrap">
+      <div class="record__head sc-stack" data-sc-in data-sc-stagger="60">
+        <p class="chapter__mark sc-label">Chapter II</p>
+        <h2 class="sc-display sc-display--lg">Record</h2>
+      </div>
+      <table class="ledger" data-sc-in>
+        <caption class="visually-hidden">Experience, education and certifications</caption>
+        <thead>
+          <tr><th scope="col">When</th><th scope="col">Where</th><th scope="col">What</th><th scope="col">Result</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="ledger__when">May to Jun 2026</td>
+            <th scope="row">Vyastics Technologies</th>
+            <td>Cybersecurity &amp; Data Analytics Intern. OWASP-aligned penetration test of a SaaS platform: chained an auth weakness into a critical finding, rated with CVSS v3.1, delivered a remediation roadmap.</td>
+            <td class="ledger__res">Internship</td>
+          </tr>
+          <tr>
+            <td class="ledger__when">2023 to 2027</td>
+            <th scope="row"><a href="https://vit.ac.in/" target="_blank" rel="noopener">VIT Vellore</a></th>
+            <td>BTech, Computer Science (Information Security). Coursework in digital forensics, malware analysis, cryptography, penetration testing.</td>
+            <td class="ledger__res"><span class="ledger__num" data-sc-count="0 8.66" data-sc-count-ms="1500">8.66</span><span class="ledger__unit">CGPA</span></td>
+          </tr>
+          <tr>
+            <td class="ledger__when">2021 to 2023</td>
+            <th scope="row"><a href="https://chettinadvidyashram.org/" target="_blank" rel="noopener">Chettinad Vidyashram</a></th>
+            <td>Class 12, CBSE, Computer Science. JEE Main: 95.75 percentile.</td>
+            <td class="ledger__res"><span class="ledger__num" data-sc-count="0 93" data-sc-count-ms="1500">93</span><span class="ledger__pct">%</span></td>
+          </tr>
+          <tr>
+            <td class="ledger__when">2018 to 2020</td>
+            <th scope="row"><a href="https://sishyaomrschool.org/" target="_blank" rel="noopener">Dr. C. L. Metha Sishya OMR</a></th>
+            <td>Class 10, ICSE</td>
+            <td class="ledger__res"><span class="ledger__num" data-sc-count="0 93" data-sc-count-ms="1500">93</span><span class="ledger__pct">%</span></td>
+          </tr>
+          <tr>
+            <td class="ledger__when">Sep 2026</td>
+            <th scope="row"><a href="https://cp.certmetrics.com/amazon/en/public/verify/credential/fb052c14d3a541d48a964257e6e664bf" target="_blank" rel="noopener">AWS</a></th>
+            <td>Certified Cloud Practitioner</td>
+            <td class="ledger__res">Certified</td>
+          </tr>
+          <tr>
+            <td class="ledger__when">Jun 2025</td>
+            <th scope="row"><a href="https://courses.vit.skillsnetwork.site/certificates/382eeecef72f44a7870255b9f7cd5df1" target="_blank" rel="noopener">IBM</a></th>
+            <td>Cyber Security Analyst Professional Certificate: network security, incident response, SIEM, penetration testing, compliance.</td>
+            <td class="ledger__res">Certified</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 
-	</section>
+  <!-- III · TOOLKIT · a typeset index. The resume's five groups, stated plainly. -->
+  <section class="chapter toolkit" id="toolkit" data-chapter="toolkit">
+    <div class="sc-wrap">
+      <div class="toolkit__head sc-stack" data-sc-in data-sc-stagger="60">
+        <p class="chapter__mark sc-label">Chapter III</p>
+        <h2 class="sc-display sc-display--lg">Toolkit</h2>
+      </div>
+      <ol class="index" data-sc-in data-sc-stagger="60">
+        <li><h3>Detection</h3><p><span class="index__k">Security operations.</span> Splunk (SIEM), alert triage, threat hunting, detection tuning, MITRE ATT&amp;CK, log analysis.</p></li>
+        <li><h3>Testing</h3><p><span class="index__k">Vulnerability management.</span> Vulnerability assessment, penetration testing, remediation prioritisation, CVSS, OWASP Top 10.</p></li>
+        <li><h3>Networks</h3><p><span class="index__k">Network and system security.</span> TCP/IP, IDS, firewall log analysis, Linux security, Wireshark, Nmap.</p></li>
+        <li><h3>Access</h3><p><span class="index__k">Cryptography and access control.</span> JWT, HMAC, session security, authorization testing (BOLA/BFLA), Burp Suite, Metasploit.</p></li>
+        <li><h3>Code</h3><p><span class="index__k">Scripting and tools.</span> Python, SQL, Java, Flask, REST APIs, Git, PyTorch, scikit-learn, AWS.</p></li>
+      </ol>
+    </div>
+  </section>
 
-	<!-----------Skills Section--------------->
-	<section class="skills" id="skills">
-		<div class="main-text">
-			<h2><span>Sk</span>ills</h2>
-		</div>
-		<div class="skills-content">
-			
-			<div class="row">
-				<img src="img/project6.jpg">
-				<div class="layer">
-					<br>
-					<br>
-					<h3>Passion for Cybersecurity:</h3>
-					<p>My enthusiasm for cybersecurity goes
-						beyond technical skills; I stay informed about the latest
-						cybersecurity trends and threats.</p>
-					<!-- <a href="#"> <i class='bx bx-link-external'></i></a> -->
-				</div>
-			</div>
-			
-			<div class="row">
-				<img src="img/project1.jpg">
-				<div class="layer">
-					<br>
-					<br>
-					<h3>Web designing:</h3>
-					<p>Familiar with web development using HTML, CSS, and JavaScript, which helps in understanding how modern web applications are built</p>
-					<!-- <a href="#"> <i class='bx bx-link-external'></i></a> -->
-				</div>
-			</div>
+  <!-- SILENCE · the breath before the peak. Deliberately almost empty. -->
+  <section class="silence" aria-labelledby="silence-line" data-chapter="silence">
+    <div class="sc-wrap">
+      <p id="silence-line" class="sc-display sc-display--md" data-sc-in>Three case files follow. Each one ends in a measured result.</p>
+    </div>
+  </section>
 
-			<div class="row">
-				<img src="img/project2.jpg">
-				<div class="layer">
-					<br>
-					<br>
-					<h3>Proficient in Python:</h3>
-					<p>Comfortable writing Python programs and solving problems using variables, loops, functions, and file handling</p>
-					<!-- <a href="#"> <i class='bx bx-link-external'></i></a> -->
-				</div>
-			</div>
+  <!-- IV · CASE FILES · the peak. Pinned. Redactions lift under the scroll,
+       then the real Splunk dashboard wipes open and pans. -->
+  <section class="files" id="files" data-sc-act="pin" data-sc-span="3.6" data-chapter="files">
+    <div data-sc-stage class="files__stage">
+      <div class="files__inner" data-files-inner>
+        <header class="files__head">
+          <p class="chapter__mark sc-label">Chapter IV</p>
+          <h2 class="sc-display sc-display--md">Case files</h2>
+        </header>
 
-			<div class="row">
-				<img src="img/project3.jpg">
-				<div class="layer">
-					<br>
-					<br>
-					<h3>Java Proficiency:</h3>
-					<p>My Able to write Java programs and understand fundamental programming concepts such as classes, loops, and conditionals</p>
-					<!-- <a href="#"> <i class='bx bx-link-external'></i></a> -->
-				</div>
-			</div>
+        <div class="files__desk">
+          <article class="sheet sheet--a" aria-labelledby="file-a">
+            <p class="sheet__id">File 01 · Sep 2026 · Detection</p>
+            <h3 id="file-a" class="sheet__title"><span data-rx="0.03">Splunk Security Monitoring</span></h3>
+            <p class="sheet__line"><span data-rx="0.05">SOC-style lab on Splunk Cloud: SSH, web and firewall logs, 11 detections mapped to MITRE ATT&amp;CK, 3 dashboards, scheduled alerts.</span></p>
+            <dl class="sheet__facts">
+              <div><dt>Result</dt><dd><span data-rx="0.11">6 of 6 simulated attacks detected, 0 false positives on 1,200 normal events</span></dd></div>
+            </dl>
+            <a class="sheet__link" href="https://github.com/Shrihari6105/splunk-security-monitoring" target="_blank" rel="noopener">Read it on GitHub</a>
+          </article>
 
-			<div class="row">
-				<img src="img/project4.jpg">
-				<div class="layer">
-					<br>
-					<br>
-					<h3>MySQL Database Management:</h3>
-					<p>Familiar with creating databases, writing basic SQL queries, and retrieving data using SELECT statements</p>
-					<!-- <a href="#"> <i class='bx bx-link-external'></i></a> -->
-				</div>
-			</div>
+          <article class="sheet sheet--b" aria-labelledby="file-b">
+            <p class="sheet__id">File 02 · Sep 2026 · Access</p>
+            <h3 id="file-b" class="sheet__title"><span data-rx="0.17">JWT Attack and Defense Lab</span></h3>
+            <p class="sheet__line"><span data-rx="0.19">A deliberately vulnerable Flask API and its hardened twin. alg:none, a weak HS256 secret and RS256 to HS256 confusion, each exploited, then fixed.</span></p>
+            <dl class="sheet__facts">
+              <div><dt>Result</dt><dd><span data-rx="0.25">All 3 attacks reach /admin (200) on the vulnerable API, all 3 refused (401) on the hardened one</span></dd></div>
+            </dl>
+            <a class="sheet__link" href="https://github.com/Shrihari6105/jwt-attack-defense-lab" target="_blank" rel="noopener">Read it on GitHub</a>
+          </article>
 
-			<div class="row">
-				<img src="img/project5.jpg">
-				<div class="layer">
-					<br>
-					<br>
-					<h3>Linux Expertise: </h3>
-					<p>Experienced with using Linux for everyday tasks such as file management, navigation, and basic command-line operations</p>
-					<!-- <a href="#"> <i class='bx bx-link-external'></i></a> -->
-				</div>
-			</div>
+          <article class="sheet sheet--c" aria-labelledby="file-c">
+            <p class="sheet__id">File 03 · 2026 · Intrusion detection</p>
+            <h3 id="file-c" class="sheet__title"><span data-rx="0.31">Explainable, Risk-Aware IDS for CAN-Bus</span></h3>
+            <p class="sheet__line"><span data-rx="0.33">A fine-tuned T5-small Transformer classifying vehicle CAN-bus traffic into benign and 5 attack classes, with SHAP explanations and risk-scored alerts.</span></p>
+            <dl class="sheet__facts">
+              <div><dt>Result</dt><dd><span data-rx="0.39">94.26% accuracy, 91.56% macro F1 on unseen data</span></dd></div>
+            </dl>
+          </article>
 
-			
-		</div>
+          <figure class="exhibit">
+            <div class="exhibit__under" aria-hidden="true"><span class="sc-label">Exhibit A · dashboard</span></div>
+            <div class="exhibit__win" data-sc-reveal="up" data-sc-reveal-at="0.44 0.64">
+              <div class="exhibit__bar" aria-hidden="true"><i></i><i></i><i></i><span>Splunk Cloud · SSH &amp; Web Security Overview</span></div>
+              <div class="exhibit__view">
+                <img class="exhibit__shot" src="img/splunk-ssh-web-overview.jpg" width="1600" height="1909" loading="lazy"
+                     alt="Splunk dashboard: 33,069 failed SSH logins, 1,599 successful, 182 unique attacking IPs, 24,011 invalid-user attempts, with charts of brute-force sources, target hosts and source countries.">
+              </div>
+            </div>
+            <figcaption class="sc-label">Exhibit A: the SSH and web dashboard from File 01.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
 
-	</section>
+  <!-- V · COLOPHON · the page turns to paper and goes quiet. One link. -->
+  <section class="colophon" id="colophon" data-chapter="colophon">
+    <div class="sc-wrap colophon__inner">
+      <p class="chapter__mark sc-label">Chapter V · Colophon</p>
+      <p class="colophon__ask">Hiring for security operations? <a class="cta-link" href="https://www.linkedin.com/in/shrihari-v-40626b277/" target="_blank" rel="noopener">Connect on LinkedIn</a>.</p>
+      <dl class="colophon__list">
+        <div><dt>Email</dt><dd><a href="mailto:shrihari6105@gmail.com">shrihari6105@gmail.com</a></dd></div>
+        <div><dt>Phone</dt><dd><a href="tel:+918778358400">+91 87783 58400</a></dd></div>
+        <div><dt>GitHub</dt><dd><a href="https://github.com/Shrihari6105" target="_blank" rel="noopener">Shrihari6105</a></dd></div>
+        <div><dt>Elsewhere</dt><dd><a href="https://www.instagram.com/_shrihari_._/" target="_blank" rel="noopener">Instagram</a>, <a href="https://x.com/_shrihari__" target="_blank" rel="noopener">X</a></dd></div>
+      </dl>
+      <p class="colophon__small">Set in Archivo and Geist. © 2026 Shrihari V.</p>
+    </div>
+  </section>
 
-	<!---------------- Projects section ----------------->
-	<section class="projects" id="projects">
-		<div class="main-text">
-			<h2><span>Pro</span>jects</h2>
-		</div>
-		<div class="projects-content">
-			<div class="box">
-				<!-- <div class="s-icons">
-					<i class='bx bx-mobile-alt'></i>
-				</div> -->
-				<!-- <h3>VIT Vellore</h3>
-				<br>
-				<p>BTech, Computer Science (Information Security)
-				<br>Aug 2023</p> -->
-				
-					<h3><b>Auction Management System</b></h3>
-					<br>	
-					<p>
-						This auction management software helps in easily coordinating auction
-						houses and simplify the process by a great deal. This Project was done
-						using Python 3.9 (64-bit) and MySQL 8.0 Command Line Client.
-					</p>
-				
-				<a href="https://github.com/Shrihari6105/Auction-Management-System" class="btn">Github Link</a>
-			</div>
+</main>
 
-			<div class="box">
-				<!-- <div class="s-icons">
-					<i class='bx bx-code-alt'></i>
-				</div> -->
-				<h3>Travel Booking Website</h3>
-				<br>
-                <p>Developed a travel booking website using HTML, CSS, and JavaScript, featuring flight, train, bus, and hotel reservation 
-                  interfaces. Implemented interactive forms, embedded media, and user authentication to enhance user experience and accessibility.</p>
-				<a href="https://travel-booking-website-ten.vercel.app" class="btn">View Website</a>
-			</div>
-		</div>
-
-	</section>
-
-	<!------------------Contact section------------>
-	<section class="contact" id="contact">
-		<div class="contact-text">
-			<h2>Contact <span>Me!</span></h2>
-			<!-- <h4>If you have any project in your mind.</h4>
-			<p>I'm a website Designer - creating bold & brave interface design for compaines all across the world.</p> -->
-			<div class="list">
-				<br>
-				<h4>Mobile No : 8778358400</h4>
-				<h4>Email: shrihari6105@gmail.com</h4>
-				<h4> Linkedin:
-					<a style="color: #6f7577;"
-						href="https://www.linkedin.com/in/shrihari-v-40626b277/">linkedin.com/in/shrihari-v</a></h4>
-				<!-- <li><a href="#"><b>Mobile No:</b>8778358400</a></li>
-				<li><a href="#">itech@gmail.com</a></li>
-				<li><a href="#"></a></li> -->
-			</div>
-
-			<div class="contact-icons">
-				<a href="https://www.instagram.com/_shrihari_._/" target="_blank"><i
-                                class='bx bxl-instagram'></i></a>
-                <a href="https://www.linkedin.com/in/shrihari-v-40626b277/" target="_blank"><i
-                                class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/Shrihari6105" target="_blank"><i 
-								class='bx bxl-github'></i></a>
-                <a href="https://x.com/_shrihari__" target="_blank"><i
-                                class='bx bxl-twitter'></i></a>
-			</div>
-		</div>
-		<!-- <div class="contact-form">
-			<form action="">
-				<input type="name" placeholder="Your Name " required>
-				<input type="email" placeholder="Your Email " required>
-				<input type="number" placeholder="your Mobile Number" required>
-				<textarea name="" id="" cols="35" rows="10" placeholder="How Can I Help You " required></textarea>
-				<input type="submit" value="Send Message" class="submit" required>
-			</form>
-
-		</div> -->
-	</section>
-
-	<!---------------------End Section----------------------->
-	<!-- <section class="end">
-		<div class="last-text"> -->
-
-	<!-- </div>
-		<div class="top">
-			<a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
-		</div>
-	</section> -->
-
-	<!--------------- Footer section --------------->
-	<section class="end">
-		<footer>
-			<p>&copy; 2025 Shrihari V. All rights reserved.</p>
-		</footer>
-		<!-- <div class="top">
-			<a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
-		</div> -->
-	</section>
+<script src="engine/scrollcraft.js"></script>
+<script src="js/site.js"></script>
 </body>
-
 </html>
