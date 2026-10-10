@@ -7,8 +7,8 @@ and derived from the existing site content.
 ## The eight topics
 
 1. **Vibe.** Owner: "Dark technical / nocturne." Authored refinement: a
-   security case file read at night. Precise, quiet, one signal-red accent
-   taken from the owner's own red-on-black icon set. No hacker costume: no
+   security case file read at night. Precise, quiet, one mint-green accent
+   (owner's choice on 2026-10-09 after trying signal red and SOC amber). No hacker costume: no
    green terminals, no matrix rain, no fake code.
 2. **Journey.** Authored from the current site's order: who he is, where he
    studied, what he can do, what he built, how to reach him.

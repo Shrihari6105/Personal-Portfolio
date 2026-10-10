@@ -28,7 +28,7 @@ changes only grammar and world will fail it.
 
 | Build | Grammar | Nav treatment | Hero device | Act-sequence shape | Close pattern | Signature move | World | Port |
 |---|---|---|---|---|---|---|---|---|
-| portfolio (Shrihari V.) | Chaptered editorial | Margin folio: roman numeral + chapter title, clickable, collapses to a corner chip under 1100px | Title page: name at 17vw over a receding outline shield (parallax), no media | flow(parallax+reveal) > count ledger > in index > silence > pin(bespoke) > paper colophon; 7 sections, ~10.2vh | Hard cut to paper colophon, CTA as a line of running text | Declassification: per-line redaction bars peel off under --sc-p, then a real dashboard wipes open and pans | Nocturne case file, signal red, paper sheets on a dark desk | 4500 |
+| portfolio (Shrihari V.) | Chaptered editorial | Fixed top bar (transparent over the hero, solid on scroll), five section links with the owner's original wave underline on hover and on the current section; folds to a panel under 860px | Title page: name at 17vw over the owner's letter-glitch field (parallax), no media | flow(parallax+reveal) > count ledger > in index > silence > pin(bespoke) > paper colophon; 7 sections, ~10.2vh | Hard cut to paper colophon, CTA as a line of running text | Declassification: per-line redaction bars peel off under --sc-p while the stage holds still per file, then a real dashboard pans | Nocturne case file, mint green (red, amber and blue kept as ?palette= variants), paper sheets on a dark desk | 4500 |
 
 ---
 
@@ -39,7 +39,7 @@ reusing: a grammar, a nav treatment, a close pattern, a signature move, an
 act-count-and-length band. The shared columns are what the next build inherits
 as a constraint, so writing them down is the whole point.
 
-- Chaptered editorial with a margin folio and a paper colophon.
+- Chaptered editorial with a paper colophon.
 - Redaction-lift signature (per-line bars driven from --sc-p).
 - A pinned peak that reads down a desk via an inner --travel translate.
 

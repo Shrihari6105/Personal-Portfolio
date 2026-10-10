@@ -3,48 +3,54 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Shrihari V. · Information security student, VIT Vellore</title>
-<meta name="description" content="Shrihari V., final-year Information Security student at VIT Vellore. Splunk detections, a JWT attack and defense lab, and an explainable IDS.">
-<meta name="theme-color" content="#0B0C0E">
+<title>Shrihari · Information security student, VIT Vellore</title>
+<meta name="description" content="Shrihari, Information Security student at VIT Vellore, working across security operations, penetration testing and secure development.">
+<meta name="theme-color" content="#090C0A">
 <link rel="icon" href="img/tab_logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Geist:wght@400..600&display=swap">
 <link rel="stylesheet" href="engine/scrollcraft.css">
 <link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/palettes.css">
 </head>
 <body>
 
 <div class="sc-grain" aria-hidden="true"></div>
 
-<!-- The folio: the page's only chrome. Chapter number and title, in the margin. -->
-<nav class="folio" aria-label="Chapters">
-  <ol>
-    <li><a href="#person" data-folio="person"><span class="folio__n">I</span><span class="folio__t">The person</span></a></li>
-    <li><a href="#record" data-folio="record"><span class="folio__n">II</span><span class="folio__t">Record</span></a></li>
-    <li><a href="#toolkit" data-folio="toolkit"><span class="folio__n">III</span><span class="folio__t">Toolkit</span></a></li>
-    <li><a href="#files" data-folio="files"><span class="folio__n">IV</span><span class="folio__t">Case files</span></a></li>
-    <li><a href="#colophon" data-folio="colophon"><span class="folio__n">V</span><span class="folio__t">Colophon</span></a></li>
-  </ol>
-</nav>
+<!-- The menu bar. Links carry the wave underline from the original site. -->
+<header class="bar" data-bar>
+  <div class="bar__in">
+    <a class="bar__mark" href="#top">Shrihari</a>
+    <button class="bar__toggle" type="button" aria-expanded="false" aria-controls="bar-menu" data-bar-toggle>
+      <span class="visually-hidden">Menu</span><i aria-hidden="true"></i><i aria-hidden="true"></i>
+    </button>
+    <nav id="bar-menu" class="bar__nav" aria-label="Sections">
+      <ul>
+        <li><a class="wave" href="#person" data-nav="person">About</a></li>
+        <li><a class="wave" href="#record" data-nav="record">Record</a></li>
+        <li><a class="wave" href="#toolkit" data-nav="toolkit">Toolkit</a></li>
+        <li><a class="wave" href="#files" data-nav="files">Case files</a></li>
+        <li><a class="wave" href="#colophon" data-nav="colophon">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-<main id="top">
+<main id="top" tabindex="-1">
 
-  <!-- TITLE PAGE · type on the ground, the shield receding behind the name -->
+  <!-- TITLE PAGE · the name over the letter-glitch field -->
   <section class="title" id="title" data-sc-act="flow" data-chapter="title">
-    <div class="title__shield" data-sc-parallax="-1.8" aria-hidden="true">
-      <svg viewBox="0 0 100 104" fill="none">
-        <path d="M50 3C66 12 82 15 94 15v32c0 30-20 46-44 54C26 93 6 77 6 47V15c12 0 28-3 44-12Z" stroke="currentColor" stroke-width=".35"/>
-        <path d="M50 11c13 7 26 10 36 10v26c0 25-16 38-36 45C30 85 14 72 14 47V21c10 0 23-3 36-10Z" stroke="currentColor" stroke-width=".18"/>
-        <circle cx="50" cy="44" r="8" stroke="currentColor" stroke-width=".35"/>
-        <path d="M46 51l-4 21h16l-4-21" stroke="currentColor" stroke-width=".35"/>
-      </svg>
-    </div>
+    <div class="title__glitch" id="letter-glitch-bg" data-sc-parallax="-1.4" aria-hidden="true"></div>
     <div class="title__body sc-wrap">
-      <h1 class="title__name">Shrihari&nbsp;V.</h1>
+      <h1 class="title__name">Shrihari</h1>
       <div class="title__foot">
-        <p class="sc-lede">Final-year information security student at VIT Vellore. I build detections, break authentication, and then fix it.</p>
-        <p class="title__cta"><a class="cta-link" href="https://www.linkedin.com/in/shrihari-v-40626b277/" target="_blank" rel="noopener">Connect on LinkedIn</a></p>
+        <p class="sc-lede">Information security student at VIT Vellore, working across security operations, penetration testing and secure development.</p>
+        <p class="title__actions">
+          <a class="cta-btn" href="https://www.linkedin.com/in/shrihari-v-40626b277/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+          <a class="quiet-link" href="https://github.com/Shrihari6105" target="_blank" rel="noopener">GitHub</a>
+          <a class="quiet-link" href="mailto:shrihari6105@gmail.com">Email</a>
+        </p>
       </div>
     </div>
   </section>
@@ -62,8 +68,8 @@
       <div class="person__text sc-stack" data-sc-in data-sc-stagger="70">
         <p class="chapter__mark sc-label">Chapter I</p>
         <h2 class="sc-display sc-display--lg">The person</h2>
-        <p class="sc-lede">I am in my final year of Computer Science (Information Security) at VIT Vellore, focused on security operations.</p>
-        <p class="sc-body">I write and tune SIEM detections in Splunk, test authentication and access control the way an attacker would, and spent a summer internship running a penetration test on a live SaaS platform. I am looking for a security operations role where that work is the job.</p>
+        <p class="sc-lede">I am in my final year of Computer Science (Information Security) at VIT Vellore.</p>
+        <p class="sc-body">My work covers both sides of security: monitoring, detection and incident response on the defensive side, and penetration testing and vulnerability assessment on the offensive side. An industry internship and the IBM Cyber Security Analyst certification put that into practice. I am looking for a role in security operations, threat analysis or secure systems development.</p>
       </div>
     </div>
   </section>
@@ -148,8 +154,8 @@
   </section>
 
   <!-- IV · CASE FILES · the peak. Pinned. Redactions lift under the scroll,
-       then the real Splunk dashboard wipes open and pans. -->
-  <section class="files" id="files" data-sc-act="pin" data-sc-span="3.6" data-chapter="files">
+       then the stage steps down to the real Splunk dashboard, which pans. -->
+  <section class="files" id="files" data-sc-act="pin" data-sc-span="3.2" data-chapter="files">
     <div data-sc-stage class="files__stage">
       <div class="files__inner" data-files-inner>
         <header class="files__head">
@@ -160,36 +166,35 @@
         <div class="files__desk">
           <article class="sheet sheet--a" aria-labelledby="file-a">
             <p class="sheet__id">File 01 · Sep 2026 · Detection</p>
-            <h3 id="file-a" class="sheet__title"><span data-rx="0.03">Splunk Security Monitoring</span></h3>
-            <p class="sheet__line"><span data-rx="0.05">SOC-style lab on Splunk Cloud: SSH, web and firewall logs, 11 detections mapped to MITRE ATT&amp;CK, 3 dashboards, scheduled alerts.</span></p>
+            <h3 id="file-a" class="sheet__title"><span data-rx>Splunk Security Monitoring</span></h3>
+            <p class="sheet__line"><span data-rx>SOC-style lab on Splunk Cloud: SSH, web and firewall logs, 11 detections mapped to MITRE ATT&amp;CK, 3 dashboards, scheduled alerts.</span></p>
             <dl class="sheet__facts">
-              <div><dt>Result</dt><dd><span data-rx="0.11">6 of 6 simulated attacks detected, 0 false positives on 1,200 normal events</span></dd></div>
+              <div><dt>Result</dt><dd><span data-rx>6 of 6 simulated attacks detected, 0 false positives on 1,200 normal events</span></dd></div>
             </dl>
             <a class="sheet__link" href="https://github.com/Shrihari6105/splunk-security-monitoring" target="_blank" rel="noopener">Read it on GitHub</a>
           </article>
 
           <article class="sheet sheet--b" aria-labelledby="file-b">
             <p class="sheet__id">File 02 · Sep 2026 · Access</p>
-            <h3 id="file-b" class="sheet__title"><span data-rx="0.17">JWT Attack and Defense Lab</span></h3>
-            <p class="sheet__line"><span data-rx="0.19">A deliberately vulnerable Flask API and its hardened twin. alg:none, a weak HS256 secret and RS256 to HS256 confusion, each exploited, then fixed.</span></p>
+            <h3 id="file-b" class="sheet__title"><span data-rx>JWT Attack and Defense Lab</span></h3>
+            <p class="sheet__line"><span data-rx>A deliberately vulnerable Flask API and its hardened twin. alg:none, a weak HS256 secret and RS256 to HS256 confusion, each exploited, then fixed.</span></p>
             <dl class="sheet__facts">
-              <div><dt>Result</dt><dd><span data-rx="0.25">All 3 attacks reach /admin (200) on the vulnerable API, all 3 refused (401) on the hardened one</span></dd></div>
+              <div><dt>Result</dt><dd><span data-rx>All 3 attacks reach /admin (200) on the vulnerable API, all 3 refused (401) on the hardened one</span></dd></div>
             </dl>
             <a class="sheet__link" href="https://github.com/Shrihari6105/jwt-attack-defense-lab" target="_blank" rel="noopener">Read it on GitHub</a>
           </article>
 
           <article class="sheet sheet--c" aria-labelledby="file-c">
             <p class="sheet__id">File 03 · 2026 · Intrusion detection</p>
-            <h3 id="file-c" class="sheet__title"><span data-rx="0.31">Explainable, Risk-Aware IDS for CAN-Bus</span></h3>
-            <p class="sheet__line"><span data-rx="0.33">A fine-tuned T5-small Transformer classifying vehicle CAN-bus traffic into benign and 5 attack classes, with SHAP explanations and risk-scored alerts.</span></p>
+            <h3 id="file-c" class="sheet__title"><span data-rx>Explainable, Risk-Aware IDS for CAN-Bus</span></h3>
+            <p class="sheet__line"><span data-rx>A fine-tuned T5-small Transformer classifying vehicle CAN-bus traffic into benign and 5 attack classes, with SHAP explanations and risk-scored alerts.</span></p>
             <dl class="sheet__facts">
-              <div><dt>Result</dt><dd><span data-rx="0.39">94.26% accuracy, 91.56% macro F1 on unseen data</span></dd></div>
+              <div><dt>Result</dt><dd><span data-rx>94.26% accuracy, 91.56% macro F1 on unseen data</span></dd></div>
             </dl>
           </article>
 
           <figure class="exhibit">
-            <div class="exhibit__under" aria-hidden="true"><span class="sc-label">Exhibit A · dashboard</span></div>
-            <div class="exhibit__win" data-sc-reveal="up" data-sc-reveal-at="0.44 0.64">
+            <div class="exhibit__win">
               <div class="exhibit__bar" aria-hidden="true"><i></i><i></i><i></i><span>Splunk Cloud · SSH &amp; Web Security Overview</span></div>
               <div class="exhibit__view">
                 <img class="exhibit__shot" src="img/splunk-ssh-web-overview.jpg" width="1600" height="1909" loading="lazy"
@@ -214,13 +219,14 @@
         <div><dt>GitHub</dt><dd><a href="https://github.com/Shrihari6105" target="_blank" rel="noopener">Shrihari6105</a></dd></div>
         <div><dt>Elsewhere</dt><dd><a href="https://www.instagram.com/_shrihari_._/" target="_blank" rel="noopener">Instagram</a>, <a href="https://x.com/_shrihari__" target="_blank" rel="noopener">X</a></dd></div>
       </dl>
-      <p class="colophon__small">Set in Archivo and Geist. © 2026 Shrihari V.</p>
+      <p class="colophon__small">Set in Archivo and Geist. © 2026 Shrihari</p>
     </div>
   </section>
 
 </main>
 
 <script src="engine/scrollcraft.js"></script>
+<script src="js/letter-glitch.js"></script>
 <script src="js/site.js"></script>
 </body>
 </html>
