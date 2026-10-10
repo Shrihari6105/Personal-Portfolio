@@ -1,423 +1,232 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="description"
-		content="Shrihari V — Information Security Student at VIT Vellore. Penetration testing, VAPT, OWASP, Threat Analysis." />
-	<title>Shrihari V — Information Security Portfolio</title>
-	<link rel="icon" href="img/tab_logo.jpg" type="image/jpeg" />
-
-	<!-- Fonts -->
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link
-		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;800;900&family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
-		rel="stylesheet" />
-
-	<!-- Boxicons (used in original markup) -->
-	<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-	<!-- FontAwesome for additional icons -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-	<!-- GSAP (for PillNav) -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-
-	<link rel="stylesheet" href="css/pill-nav.css" />
-	<link rel="stylesheet" href="css/style.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shrihari · Information security student, VIT Vellore</title>
+<meta name="description" content="Shrihari, Information Security student at VIT Vellore, working across security operations, penetration testing and secure development.">
+<meta name="theme-color" content="#090C0A">
+<link rel="icon" href="img/tab_logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Geist:wght@400..600&display=swap">
+<link rel="stylesheet" href="engine/scrollcraft.css">
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/palettes.css">
 </head>
-
 <body>
-	<!-- ============== Pill Navigation ============== -->
-	<div id="pill-nav-wrapper"></div>
 
-	<!-- ============== Home / Hero ============== -->
-	<section class="home" id="home" data-testid="home-section">
-		<div id="letter-glitch-bg" aria-hidden="true"></div>
-		<div class="bg-grid" aria-hidden="true"></div>
-		<div class="bg-glow" aria-hidden="true"></div>
+<div class="sc-grain" aria-hidden="true"></div>
 
-		<div class="home-text">
-			<div class="slide">
-				<span class="one">Hello</span>
-				<span class="two">I'm</span>
-			</div>
-			<h1 data-testid="hero-name">Shrihari</h1>
-			<h3><span class="accent-text">Information Security</span> Student.</h3>
-			<p class="hero-sub">
-				BTech CSE (Information Security), VIT Vellore
-			</p>
-			<div class="hero-cta">
-				<a href="#projects" class="btn btn-primary" data-testid="cta-projects">
-					<i class="fa-solid fa-code"></i> View Projects
-				</a>
-				<a href="#contact" class="btn btn-secondary" data-testid="cta-contact">
-					<i class="fa-solid fa-paper-plane"></i> Contact Me
-				</a>
-			</div>
-		</div>
-	</section>
+<!-- The menu bar. Links carry the wave underline from the original site. -->
+<header class="bar" data-bar>
+  <div class="bar__in">
+    <a class="bar__mark" href="#top">Shrihari</a>
+    <button class="bar__toggle" type="button" aria-expanded="false" aria-controls="bar-menu" data-bar-toggle>
+      <span class="visually-hidden">Menu</span><i aria-hidden="true"></i><i aria-hidden="true"></i>
+    </button>
+    <nav id="bar-menu" class="bar__nav" aria-label="Sections">
+      <ul>
+        <li><a class="wave" href="#person" data-nav="person">About</a></li>
+        <li><a class="wave" href="#record" data-nav="record">Record</a></li>
+        <li><a class="wave" href="#toolkit" data-nav="toolkit">Toolkit</a></li>
+        <li><a class="wave" href="#files" data-nav="files">Case files</a></li>
+        <li><a class="wave" href="#colophon" data-nav="colophon">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-	<!-- ============== About ============== -->
-	<section class="about" id="about" data-testid="about-section">
-		<div class="about-img">
-			<div class="img-wrap">
-				<img src="img/about.jpg" alt="Shrihari V"
-					onerror="this.style.display='none'; this.parentElement.classList.add('img-fallback');" />
-				<div class="img-fallback-icon"><i class="fa-solid fa-user-shield"></i></div>
-			</div>
-		</div>
+<main id="top" tabindex="-1">
 
-		<div class="about-text">
-			<span class="section-tag">About</span>
-			<h2>About <span>Me</span></h2>
-			<p style="text-align: justify;">
-				Pre-Final Year BTech student in Computer Science (Information Security) at VIT Vellore
-				(CGPA: 8.66), with hands-on experience in penetration testing, vulnerability assessment,
-				and application security from both academic projects and an industry internship.
-				Completed the IBM Cybersecurity Analyst Professional Certification and delivered a full
-				OWASP-aligned VAPT engagement on a production SaaS platform. Targeting roles in Cyber-
-				security, threat analysis, or secure systems development.
-			</p>
-		</div>
-	</section>
+  <!-- TITLE PAGE · the name over the letter-glitch field -->
+  <section class="title" id="title" data-sc-act="flow" data-chapter="title">
+    <div class="title__glitch" id="letter-glitch-bg" data-sc-parallax="-1.4" aria-hidden="true"></div>
+    <div class="title__body sc-wrap">
+      <h1 class="title__name">Shrihari</h1>
+      <div class="title__foot">
+        <p class="sc-lede">Information security student at VIT Vellore, working across security operations, penetration testing and secure development.</p>
+        <p class="title__actions">
+          <a class="cta-btn" href="https://www.linkedin.com/in/shrihari-v-40626b277/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+          <a class="quiet-link" href="https://github.com/Shrihari6105" target="_blank" rel="noopener">GitHub</a>
+          <a class="quiet-link" href="mailto:shrihari6105@gmail.com">Email</a>
+        </p>
+      </div>
+    </div>
+  </section>
 
-	<!-- ============== Education ============== -->
-	<section class="education" id="education" data-testid="education-section">
-		<div class="main-text">
-			<span class="section-tag">Journey</span>
-			<h2>E<span>du</span>cation</h2>
-		</div>
-		<div class="education-content">
-			<div class="box" data-testid="education-vit">
-				<div class="box-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-				<h3>VIT Vellore</h3>
-				<p class="box-meta">BTech · Computer Science (Information Security)<br />Aug 2023 – Present · CGPA 8.66
-				</p>
-				<a href="https://vit.ac.in/" target="_blank" rel="noopener" class="btn btn-ghost">Visit <i
-						class="fa-solid fa-arrow-up-right-from-square"></i></a>
-			</div>
+  <!-- I · THE PERSON · one real photograph, in its own column, with a caption -->
+  <section class="chapter person" id="person" data-sc-act="flow" data-chapter="person">
+    <div class="sc-wrap person__grid">
+      <figure class="person__fig" data-sc-reveal="up" data-sc-reveal-at="0.1 0.42">
+        <div class="person__frame">
+          <img src="img/about.jpg" width="1280" height="960" data-sc-parallax="-0.9"
+               alt="Shrihari standing on a tree-lined campus road, smiling, in a striped football shirt.">
+        </div>
+        <figcaption class="sc-label">On campus, between classes.</figcaption>
+      </figure>
+      <div class="person__text sc-stack" data-sc-in data-sc-stagger="70">
+        <p class="chapter__mark sc-label">Chapter I</p>
+        <h2 class="sc-display sc-display--lg">The person</h2>
+        <p class="sc-lede">I am in my final year of Computer Science (Information Security) at VIT Vellore.</p>
+        <p class="sc-body">My work covers both sides of security: monitoring, detection and incident response on the defensive side, and penetration testing and vulnerability assessment on the offensive side. An industry internship and the IBM Cyber Security Analyst certification put that into practice. I am looking for a role in security operations, threat analysis or secure systems development.</p>
+      </div>
+    </div>
+  </section>
 
-			<div class="box" data-testid="education-chettinad">
-				<div class="box-icon"><i class="fa-solid fa-school"></i></div>
-				<h3>Chettinad Vidyashram</h3>
-				<p class="box-meta">Class 12 · Computer Science (CBSE)<br />Mar 2021 – May 2023 · 93%</p>
-				<a href="https://chettinadvidyashram.org/" target="_blank" rel="noopener" class="btn btn-ghost">Visit <i
-						class="fa-solid fa-arrow-up-right-from-square"></i></a>
-			</div>
+  <!-- II · RECORD · a ledger, not boxes. Real figures count into place. -->
+  <section class="chapter record" id="record" data-chapter="record">
+    <div class="sc-wrap">
+      <div class="record__head sc-stack" data-sc-in data-sc-stagger="60">
+        <p class="chapter__mark sc-label">Chapter II</p>
+        <h2 class="sc-display sc-display--lg">Record</h2>
+      </div>
+      <table class="ledger" data-sc-in>
+        <caption class="visually-hidden">Experience, education and certifications</caption>
+        <thead>
+          <tr><th scope="col">When</th><th scope="col">Where</th><th scope="col">What</th><th scope="col">Result</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="ledger__when">May to Jun 2026</td>
+            <th scope="row">Vyastics Technologies</th>
+            <td>Cybersecurity &amp; Data Analytics Intern. Led an OWASP-aligned penetration test of a SaaS document-signing platform: chained an auth weakness into a critical finding, rated with CVSS v3.1, delivered a remediation roadmap. Also ran functional QA across 7 products, wrote analytical SQL (CTEs, window functions), and built Tableau dashboards, including a <a href="https://shrihari6105.github.io/Healthcare-Finance-Dashboard/" target="_blank" rel="noopener">healthcare finance dashboard</a>.</td>
+            <td class="ledger__res">Internship</td>
+          </tr>
+          <tr>
+            <td class="ledger__when">2023 to 2027</td>
+            <th scope="row"><a href="https://vit.ac.in/" target="_blank" rel="noopener">VIT Vellore</a></th>
+            <td>BTech, Computer Science (Information Security). Coursework in digital forensics, malware analysis, cryptography, penetration testing.</td>
+            <td class="ledger__res"><span class="ledger__num" data-sc-count="0 8.66" data-sc-count-ms="1500">8.66</span><span class="ledger__unit">CGPA</span></td>
+          </tr>
+          <tr>
+            <td class="ledger__when">2021 to 2023</td>
+            <th scope="row"><a href="https://chettinadvidyashram.org/" target="_blank" rel="noopener">Chettinad Vidyashram</a></th>
+            <td>Class 12, CBSE, Computer Science. JEE Main: 95.75 percentile.</td>
+            <td class="ledger__res"><span class="ledger__num" data-sc-count="0 93" data-sc-count-ms="1500">93</span><span class="ledger__pct">%</span></td>
+          </tr>
+          <tr>
+            <td class="ledger__when">2018 to 2020</td>
+            <th scope="row"><a href="https://sishyaomrschool.org/" target="_blank" rel="noopener">Dr. C. L. Metha Sishya OMR</a></th>
+            <td>Class 10, ICSE</td>
+            <td class="ledger__res"><span class="ledger__num" data-sc-count="0 93" data-sc-count-ms="1500">93</span><span class="ledger__pct">%</span></td>
+          </tr>
+          <tr>
+            <td class="ledger__when">Sep 2026</td>
+            <th scope="row"><a href="https://cp.certmetrics.com/amazon/en/public/verify/credential/fb052c14d3a541d48a964257e6e664bf" target="_blank" rel="noopener">AWS</a></th>
+            <td>Certified Cloud Practitioner</td>
+            <td class="ledger__res">Certified</td>
+          </tr>
+          <tr>
+            <td class="ledger__when">Jun 2025</td>
+            <th scope="row"><a href="https://courses.vit.skillsnetwork.site/certificates/382eeecef72f44a7870255b9f7cd5df1" target="_blank" rel="noopener">IBM</a></th>
+            <td>Cyber Security Analyst Professional Certificate: network security, incident response, SIEM, penetration testing, compliance.</td>
+            <td class="ledger__res">Certified</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 
-			<div class="box" data-testid="education-sishya">
-				<div class="box-icon"><i class="fa-solid fa-book"></i></div>
-				<h3>Dr. C. L. Methta Sishya OMR</h3>
-				<p class="box-meta">Class 10 · ICSE<br />Jun 2018 – Apr 2020 · 93%</p>
-				<a href="https://sishyaomrschool.org/" target="_blank" rel="noopener" class="btn btn-ghost">Visit <i
-						class="fa-solid fa-arrow-up-right-from-square"></i></a>
-			</div>
-		</div>
-	</section>
+  <!-- III · TOOLKIT · a typeset index. The resume's five groups, stated plainly. -->
+  <section class="chapter toolkit" id="toolkit" data-chapter="toolkit">
+    <div class="sc-wrap">
+      <div class="toolkit__head sc-stack" data-sc-in data-sc-stagger="60">
+        <p class="chapter__mark sc-label">Chapter III</p>
+        <h2 class="sc-display sc-display--lg">Toolkit</h2>
+      </div>
+      <ol class="index" data-sc-in data-sc-stagger="60">
+        <li><h3>Detection</h3><p><span class="index__k">Security operations.</span> Splunk (SIEM), alert triage, threat hunting, detection tuning, MITRE ATT&amp;CK, log analysis.</p></li>
+        <li><h3>Testing</h3><p><span class="index__k">Vulnerability management.</span> Vulnerability assessment, penetration testing (VAPT), OWASP WSTG and API Top 10, SQLi, XSS, SSRF, privilege escalation, CVSS, remediation prioritisation. Burp Suite, OpenVAS, Gobuster, Dirsearch.</p></li>
+        <li><h3>Networks</h3><p><span class="index__k">Network and system security.</span> TCP/IP, IDS/IPS, firewall design and log analysis, Linux security, Wireshark, Nmap, Scapy.</p></li>
+        <li><h3>Access</h3><p><span class="index__k">Cryptography and access control.</span> JWT, HMAC, session security, RBAC/ABAC, authorization testing (BOLA/BFLA), Metasploit.</p></li>
+        <li><h3>Code</h3><p><span class="index__k">Scripting and tools.</span> Python, Java, C, C++, SQL, Flask, REST APIs, Git, PyTorch, scikit-learn, AWS.</p></li>
+        <li><h3>Data</h3><p><span class="index__k">Analytics and QA.</span> Tableau dashboards, SQL with CTEs and window functions, functional testing and defect reporting.</p></li>
+      </ol>
+    </div>
+  </section>
 
-	<!-- ============== Experience ============== -->
-	<section class="education experience" id="experience" data-testid="experience-section">
-		<div class="main-text">
-			<span class="section-tag">Work</span>
-			<h2>Exp<span>eri</span>ence</h2>
-		</div>
-		<div class="education-content single-col">
-			<div class="box exp-box" data-testid="experience-vyastics">
-				<div class="exp-head">
-					<div class="exp-img"><img src="img/Vyastics Logo.jpeg" alt="Vyastics Logo"></div>
-					<div>
-						<h3>Cybersecurity &amp; Data Analytics Intern</h3>
-						<p class="box-meta"><b>Vyastics</b> · On-site &nbsp;|&nbsp; May 2026 – June 2026
-						</p>
-					</div>
-				</div>
-				<ul class="exp-list">
-					<li><i class="fa-solid fa-bug"></i> Led a multi-phase VAPT of a SaaS document-signing platform
-						(OWASP WSTG / API Top 10), chaining an auth weakness into a critical-impact exploit with full
-						reproduction evidence.</li>
-					<li><i class="fa-solid fa-key"></i> Tested auth/session (JWT, rate limiting), authorization
-						(BOLA/BFLA, multi-tenant isolation), and API / file / webhook surfaces with Burp Suite, Nmap,
-						OpenVAS, and Gobuster.</li>
-					<li><i class="fa-solid fa-check-double"></i> Executed functional QA across 7 products with detailed
-						defect documentation.</li>
-					<li><i class="fa-solid fa-database"></i> Wrote analytical SQL using CTEs and window functions (RANK,
-						LAG, NTILE) for revenue and customer segmentation analysis.</li>
-					<li><i class="fa-solid fa-chart-column"></i> Built Tableau BI dashboards including a 3-page
-						healthcare finance dashboard and a payroll dashboard with custom attendance/overtime/TDS logic.
-					</li>
-				</ul>
-				<div class="exp-actions">
-					<a href="https://shrihari6105.github.io/Healthcare-Finance-Dashboard/" target="_blank"
-						rel="noopener" class="btn btn-primary btn-sm" data-testid="exp-link-dashboard">
-						<i class="fa-solid fa-chart-line"></i> View Dashboard
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
+  <!-- SILENCE · the breath before the peak. Deliberately almost empty. -->
+  <section class="silence" aria-labelledby="silence-line" data-chapter="silence">
+    <div class="sc-wrap">
+      <p id="silence-line" class="sc-display sc-display--md" data-sc-in>Three case files follow. Each one ends in a measured result.</p>
+    </div>
+  </section>
 
-	<!-- ============== Certifications ============== -->
-	<section class="education certifications" id="certifications" data-testid="cert-section">
-		<div class="main-text">
-			<span class="section-tag">Credentials</span>
-			<h2>Certifi<span>ca</span>tions</h2>
-		</div>
-		<div class="education-content">
-			<div class="box cert-box" data-testid="cert-ibm">
-				<div class="box-icon ibm"><i class="fa-solid fa-shield-halved"></i></div>
-				<h3>IBM Cybersecurity Analyst</h3>
-				<p class="box-meta">Professional Certification · IBM &amp; SkillsBuild</p>
-				<p>Covers threat intel, IR, network &amp; endpoint security, vulnerability management, and forensics —
-					built around real-world SOC workflows.</p>
-				<a href="https://courses.vit.skillsnetwork.site/certificates/382eeecef72f44a7870255b9f7cd5df1"
-					target="_blank" rel="noopener" class="btn btn-primary" data-testid="cert-link-ibm">
-					<i class="fa-solid fa-certificate"></i> View Certificate
-				</a>
-			</div>
-		</div>
-	</section>
+  <!-- IV · CASE FILES · the peak. Pinned. Redactions lift under the scroll,
+       then the stage steps down to the real Splunk dashboard, which pans. -->
+  <section class="files" id="files" data-sc-act="pin" data-sc-span="3.2" data-chapter="files">
+    <div data-sc-stage class="files__stage">
+      <div class="files__inner" data-files-inner>
+        <header class="files__head">
+          <p class="chapter__mark sc-label">Chapter IV</p>
+          <h2 class="sc-display sc-display--md">Case files</h2>
+        </header>
 
-	<!-- ============== Skills ============== -->
-	<section class="education skills" id="skills" data-testid="skills-section">
-		<div class="main-text">
-			<span class="section-tag">Stack</span>
-			<h2><span>Sk</span>ills</h2>
-		</div>
-		<div class="education-content">
-			<div class="box skill-box" data-testid="skill-languages">
-				<div class="box-icon"><i class="fa-solid fa-code"></i></div>
-				<h3>Languages</h3>
-				<div class="chips">
-					<span class="chip">Python</span><span class="chip">Java</span>
-					<span class="chip">C</span><span class="chip">C++</span><span class="chip">SQL</span>
-				</div>
-			</div>
-			<div class="box skill-box" data-testid="skill-offensive">
-				<div class="box-icon"><i class="fa-solid fa-crosshairs"></i></div>
-				<h3>Offensive Security</h3>
-				<div class="chips">
-					<span class="chip">VAPT</span><span class="chip">OWASP WSTG/API</span>
-					<span class="chip">JWT Testing</span><span class="chip">BOLA/BFLA</span>
-					<span class="chip">Priv Esc</span><span class="chip">SQLi</span>
-					<span class="chip">XSS</span><span class="chip">SSRF</span>
-				</div>
-			</div>
-			<div class="box skill-box" data-testid="skill-defensive">
-				<div class="box-icon"><i class="fa-solid fa-shield"></i></div>
-				<h3>Defensive Security</h3>
-				<div class="chips">
-					<span class="chip">Network Security</span><span class="chip">IDS/IPS</span>
-					<span class="chip">Firewall Design</span><span class="chip">Threat Analysis</span>
-					<span class="chip">RBAC/ABAC</span><span class="chip">CVSS v3.1</span>
-				</div>
-			</div>
-			<div class="box skill-box" data-testid="skill-tools">
-				<div class="box-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-				<h3>Security Tools</h3>
-				<div class="chips">
-					<span class="chip">Burp Suite</span><span class="chip">Nmap</span>
-					<span class="chip">Metasploit</span><span class="chip">OpenVAS</span>
-					<span class="chip">Wireshark</span><span class="chip">Scapy</span>
-					<span class="chip">Gobuster</span><span class="chip">Dirsearch</span>
-				</div>
-			</div>
-			<div class="box skill-box" data-testid="skill-data">
-				<div class="box-icon"><i class="fa-solid fa-chart-pie"></i></div>
-				<h3>Data &amp; QA</h3>
-				<div class="chips">
-					<span class="chip">Tableau</span><span class="chip">SQL · CTEs</span>
-					<span class="chip">Window Functions</span><span class="chip">Functional Testing</span>
-				</div>
-			</div>
-		</div>
-	</section>
+        <div class="files__desk">
+          <article class="sheet sheet--a" aria-labelledby="file-a">
+            <p class="sheet__id">File 01 · Sep 2026 · Detection</p>
+            <h3 id="file-a" class="sheet__title"><span data-rx>Splunk Security Monitoring</span></h3>
+            <p class="sheet__line"><span data-rx>SOC-style lab on Splunk Cloud: SSH, web and firewall logs, 11 detections mapped to MITRE ATT&amp;CK, 3 dashboards, scheduled alerts.</span></p>
+            <dl class="sheet__facts">
+              <div><dt>Result</dt><dd><span data-rx>6 of 6 simulated attacks detected, 0 false positives on 1,200 normal events</span></dd></div>
+            </dl>
+            <a class="sheet__link" href="https://github.com/Shrihari6105/splunk-security-monitoring" target="_blank" rel="noopener">Read it on GitHub</a>
+          </article>
 
-	<!-- ============== Projects ============== -->
-	<section class="projects" id="projects" data-testid="projects-section">
-		<div class="main-text">
-			<span class="section-tag">Work</span>
-			<h2><span>Pro</span>jects</h2>
-		</div>
+          <article class="sheet sheet--b" aria-labelledby="file-b">
+            <p class="sheet__id">File 02 · Sep 2026 · Access</p>
+            <h3 id="file-b" class="sheet__title"><span data-rx>JWT Attack and Defense Lab</span></h3>
+            <p class="sheet__line"><span data-rx>A deliberately vulnerable Flask API and its hardened twin. alg:none, a weak HS256 secret and RS256 to HS256 confusion, each exploited, then fixed.</span></p>
+            <dl class="sheet__facts">
+              <div><dt>Result</dt><dd><span data-rx>All 3 attacks reach /admin (200) on the vulnerable API, all 3 refused (401) on the hardened one</span></dd></div>
+            </dl>
+            <a class="sheet__link" href="https://github.com/Shrihari6105/jwt-attack-defense-lab" target="_blank" rel="noopener">Read it on GitHub</a>
+          </article>
 
-		<div class="filter-chips" data-testid="project-filters">
-			<button class="filter-chip active" data-filter="all" data-testid="filter-all">All</button>
-			<button class="filter-chip" data-filter="security" data-testid="filter-security">Security</button>
-			<button class="filter-chip" data-filter="web" data-testid="filter-web">Web Dev</button>
-		</div>
+          <article class="sheet sheet--c" aria-labelledby="file-c">
+            <p class="sheet__id">File 03 · 2026 · Intrusion detection</p>
+            <h3 id="file-c" class="sheet__title"><span data-rx>Explainable, Risk-Aware IDS for CAN-Bus</span></h3>
+            <p class="sheet__line"><span data-rx>A fine-tuned T5-small Transformer classifying vehicle CAN-bus traffic into benign and 5 attack classes, with SHAP explanations and risk-scored alerts.</span></p>
+            <dl class="sheet__facts">
+              <div><dt>Result</dt><dd><span data-rx>94.26% accuracy, 91.56% macro F1 on unseen data</span></dd></div>
+            </dl>
+          </article>
 
-		<div class="projects-content">
-			<article class="box project-box" data-category="security" data-testid="project-metasploit">
-				<div class="project-head">
-					<div class="box-icon"><i class="fa-solid fa-skull-crossbones"></i></div>
-					<span class="badge">Penetration Test</span>
-				</div>
-				<h3>Exploitation Using Metasploit</h3>
-				<p>End-to-end penetration test against a Metasploitable2 target on Kali Linux, covering reconnaissance
-					through post-exploitation.</p>
-				<ul class="proj-bullets">
-					<li>Exploited UnrealIRCd backdoor (CVE-2010-2075) for root shell.</li>
-					<li>Extracted password hashes &amp; established SSH/Netcat persistence.</li>
-				</ul>
-				<div class="project-foot">
-					<span class="proj-date"><i class="fa-regular fa-calendar"></i> Jan 2025</span>
-					<a href="https://github.com/Shrihari6105/Exploitation-Using-Metasploit" target="_blank"
-						rel="noopener" class="btn btn-primary btn-sm" data-testid="project-link-metasploit">
-						<i class="fa-brands fa-github"></i> View Repo
-					</a>
-				</div>
-			</article>
+          <figure class="exhibit">
+            <div class="exhibit__win">
+              <div class="exhibit__bar" aria-hidden="true"><i></i><i></i><i></i><span>Splunk Cloud · SSH &amp; Web Security Overview</span></div>
+              <div class="exhibit__view">
+                <img class="exhibit__shot" src="img/splunk-ssh-web-overview.jpg" width="1600" height="1909" loading="lazy"
+                     alt="Splunk dashboard: 33,069 failed SSH logins, 1,599 successful, 182 unique attacking IPs, 24,011 invalid-user attempts, with charts of brute-force sources, target hosts and source countries.">
+              </div>
+            </div>
+            <figcaption class="sc-label">Exhibit A: the SSH and web dashboard from File 01.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
 
-			<article class="box project-box" data-category="security" data-testid="project-hmac">
-				<div class="project-head">
-					<div class="box-icon"><i class="fa-solid fa-fingerprint"></i></div>
-					<span class="badge">App Security</span>
-				</div>
-				<h3>HTTP Request Integrity via HMAC</h3>
-				<p>Demonstrated HTTP parameter tampering via Burp Suite, then built a Flask server defending against it
-					using HMAC-SHA256 request signing.</p>
-				<ul class="proj-bullets">
-					<li>Constant-time HMAC-SHA256 comparison to block timing attacks.</li>
-					<li>Secure Flask backend verifying request integrity end-to-end.</li>
-				</ul>
-				<div class="project-foot">
-					<span class="proj-date"><i class="fa-regular fa-calendar"></i> Jan 2026</span>
-					<a href="https://github.com/Shrihari6105/HMAC-Integrity-Demo" target="_blank" rel="noopener"
-						class="btn btn-primary btn-sm" data-testid="project-link-hmac">
-						<i class="fa-brands fa-github"></i> View Repo
-					</a>
-				</div>
-			</article>
+  <!-- V · COLOPHON · the page turns to paper and goes quiet. One link. -->
+  <section class="colophon" id="colophon" data-chapter="colophon">
+    <div class="sc-wrap colophon__inner">
+      <p class="chapter__mark sc-label">Chapter V · Colophon</p>
+      <p class="colophon__ask">Hiring for security operations? <a class="cta-link" href="https://www.linkedin.com/in/shrihari-v-40626b277/" target="_blank" rel="noopener">Connect on LinkedIn</a>.</p>
+      <dl class="colophon__list">
+        <div><dt>Email</dt><dd><a href="mailto:shrihari6105@gmail.com">shrihari6105@gmail.com</a></dd></div>
+        <div><dt>Phone</dt><dd><a href="tel:+918778358400">+91 87783 58400</a></dd></div>
+        <div><dt>GitHub</dt><dd><a href="https://github.com/Shrihari6105" target="_blank" rel="noopener">Shrihari6105</a></dd></div>
+        <div><dt>Elsewhere</dt><dd><a href="https://www.instagram.com/_shrihari_._/" target="_blank" rel="noopener">Instagram</a>, <a href="https://x.com/_shrihari__" target="_blank" rel="noopener">X</a></dd></div>
+      </dl>
+      <p class="colophon__small">Set in Archivo and Geist. © 2026 Shrihari</p>
+    </div>
+  </section>
 
-			<article class="box project-box" data-category="web" data-testid="project-travel">
-				<div class="project-head">
-					<div class="box-icon"><i class="fa-solid fa-plane"></i></div>
-					<span class="badge">Front-End</span>
-				</div>
-				<h3>Travel Booking Website</h3>
-				<p>Full-stack travel portal built with HTML, CSS, JavaScript supporting multi-modal reservations.</p>
-				<ul class="proj-bullets">
-					<li>Booking flow for flights, trains, buses, hotels.</li>
-					<li>Client-side authentication &amp; persistent state.</li>
-				</ul>
-				<div class="project-foot">
-					<span class="proj-date"><i class="fa-regular fa-calendar"></i> Jan 2024</span>
-					<a href="https://travel-booking-website-ten.vercel.app/" target="_blank" rel="noopener"
-						class="btn btn-primary btn-sm" data-testid="project-link-travel">
-						<i class="fa-solid fa-arrow-up-right-from-square"></i> View Site
-					</a>
-				</div>
-			</article>
-		</div>
-	</section>
+</main>
 
-	<!-- ============== Contact ============== -->
-	<section class="contact" id="contact" data-testid="contact-section">
-		<div class="contact-text">
-			<span class="section-tag">Get in touch</span>
-			<h2>Contact <span>Me!</span></h2>
-			<p>Open to internships and cyber-security roles.</p>
-		</div>
-
-		<div class="contact-info">
-			<ul class="contact-list" data-testid="contact-list">
-				<li>
-					<span class="ci"><i class="fa-solid fa-phone"></i></span>
-					<div><small>Mobile</small><a href="tel:+918778358400">+91 87783 58400</a></div>
-				</li>
-				<li>
-					<span class="ci"><i class="fa-solid fa-envelope"></i></span>
-					<div><small>Email</small><a href="mailto:shrihari6105@gmail.com">shrihari6105@gmail.com</a></div>
-				</li>
-				<li>
-					<span class="ci"><i class="fa-brands fa-linkedin"></i></span>
-					<div><small>LinkedIn</small><a target="_blank" rel="noopener"
-							href="https://www.linkedin.com/in/shrihari-v-40626b277/">linkedin.com/in/shrihari-v</a>
-					</div>
-				</li>
-			</ul>
-
-			<div class="contact-icons" data-testid="contact-socials">
-				<a href="https://www.instagram.com/_shrihari_._/" target="_blank" rel="noopener"
-					aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
-				<a href="https://www.linkedin.com/in/shrihari-v-40626b277/" target="_blank" rel="noopener"
-					aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
-				<a href="https://github.com/Shrihari6105" target="_blank" rel="noopener" aria-label="GitHub"><i
-						class="bx bxl-github"></i></a>
-				<a href="https://x.com/_shrihari__" target="_blank" rel="noopener" aria-label="Twitter"><i
-						class="bx bxl-twitter"></i></a>
-			</div>
-		</div>
-		<!--
-		<div class="contact-card" data-testid="contact-card">
-			<div class="contact-card-inner">
-				<i class="fa-solid fa-terminal contact-card-icon"></i>
-				<h3>Let's build something secure.</h3>
-				<p>Whether it's a VAPT engagement, a CTF team-up or a research idea — I'd love to hear about it.</p>
-				<a href="mailto:shrihari6105@gmail.com" class="btn btn-primary" data-testid="email-cta">
-					<i class="fa-solid fa-paper-plane"></i> Send Email
-				</a>
-			</div>
-		</div>
--->
-	</section>
-
-	<!-- ============== Footer ============== -->
-	<footer class="end" data-testid="footer">
-		<p>© <span id="year"></span> Shrihari V ·</p>
-		<a href="#home" class="top-btn" aria-label="Back to top" data-testid="back-to-top"><i
-				class="bx bx-up-arrow-alt"></i></a>
-	</footer>
-
-	<script src="js/pill-nav.js"></script>
-	<script src="js/click-spark.js"></script>
-	<script src="js/letter-glitch.js"></script>
-	<script>
-		// Initialize LetterGlitch on the hero background
-		const glitchContainer = document.getElementById('letter-glitch-bg');
-		if (glitchContainer) {
-			new LetterGlitch(glitchContainer, {
-				glitchSpeed: 50,
-				centerVignette: true,
-				outerVignette: true,
-				smooth: true,
-				glitchColors: ['#373737', '#d7dadd']
-			});
-		}
-
-		// Initialize PillNav
-		const pillNavContainer = document.getElementById('pill-nav-wrapper');
-		if (pillNavContainer) {
-			window.pillNavInstance = new PillNav(pillNavContainer, {
-				logoText: 'V.',
-				baseColor: '#000000',
-				pillColor: '#1c1c1c',
-				hoveredPillTextColor: '#ffffff',
-				pillTextColor: '#ffffff',
-				items: [
-					{ label: 'Home', href: '#home' },
-					{ label: 'About', href: '#about' },
-					{ label: 'Education', href: '#education' },
-					{ label: 'Experience', href: '#experience' },
-					{ label: 'Skills', href: '#skills' },
-					{ label: 'Projects', href: '#projects' },
-					{ label: 'Contact', href: '#contact' }
-				],
-				activeHref: '#home'
-			});
-		}
-
-		// Initialize ClickSpark (full-page)
-		new ClickSpark({
-			sparkColor: '#ffffff',
-			sparkSize: 12,
-			sparkRadius: 35,
-			sparkCount: 8,
-			duration: 400
-		});
-	</script>
-	<script src="js/main.js"></script>
+<script src="engine/scrollcraft.js"></script>
+<script src="js/letter-glitch.js"></script>
+<script src="js/site.js"></script>
 </body>
-
 </html>

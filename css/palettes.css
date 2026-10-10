@@ -1,0 +1,41 @@
+/* Alternative palettes for the portfolio. The default, phosphor green, lives
+   in css/site.css. Preview any of these by adding ?palette=red, ?palette=amber
+   or ?palette=blue to the URL (js/site.js sets data-palette on <html>). To
+   make one permanent, copy its values into the :root block of css/site.css.
+   Every pair below clears WCAG 4.5:1 for body text (measured 2026-10-09). */
+
+/* Signal red: the colour of a critical alert; matches the old red icon set. */
+:root[data-palette="red"] {
+  --sc-canvas: #0B0C0E; --sc-surface: #15171B;
+  --sc-ink: #ECE8E1;    --sc-ink-soft: #A8A299;
+  --sc-accent: #FF5B47; --sc-accent-ink: #1A0B08;
+  --sc-shadow-color: 220 30% 3%;
+  --paper-accent: #B0281A;
+  --g-title: #0B0C0E; --g-person: #101216; --g-record: #0B0C0E;
+  --g-tool: #121418;  --g-quiet: #070809;  --g-files: #0E1013;
+  --glitch: #2a2c31, #5d6168, #8f3a30;
+}
+
+/* SOC amber: an alert under triage; warm, distinctive, amber-terminal echo. */
+:root[data-palette="amber"] {
+  --sc-canvas: #0C0B09; --sc-surface: #171512;
+  --sc-ink: #EEE8DD;    --sc-ink-soft: #ABA394;
+  --sc-accent: #F2A93B; --sc-accent-ink: #1A1206;
+  --sc-shadow-color: 35 30% 3%;
+  --paper-accent: #8A5300;
+  --g-title: #0C0B09; --g-person: #12110E; --g-record: #0C0B09;
+  --g-tool: #151310;  --g-quiet: #080706;  --g-files: #100F0C;
+  --glitch: #2c2a26, #5f5a50, #8a6420;
+}
+
+/* Blue team: defence; the calm, corporate-safe option. */
+:root[data-palette="blue"] {
+  --sc-canvas: #0A0C11; --sc-surface: #141821;
+  --sc-ink: #E7EBF2;    --sc-ink-soft: #9AA3B2;
+  --sc-accent: #5B8CFF; --sc-accent-ink: #050A1A;
+  --sc-shadow-color: 222 40% 3%;
+  --paper-accent: #2347B8;
+  --g-title: #0A0C11; --g-person: #0F131A; --g-record: #0A0C11;
+  --g-tool: #121722;  --g-quiet: #06080C;  --g-files: #0D1118;
+  --glitch: #22283a, #4b5570, #2f4f9a;
+}
